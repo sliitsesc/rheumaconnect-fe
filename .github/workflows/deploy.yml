@@ -26,7 +26,7 @@ jobs:
 
       - name: Deploy to Azure VM
         run: |
-          ssh -o StrictHostKeyChecking=no your-username@${{ secrets.AZURE_VM_IP }} << 'EOF'
+          ssh -o StrictHostKeyChecking=no rheumac@${{ secrets.AZURE_VM_IP }} << 'EOF'
           sudo docker pull pawanlive/rc-fe:latest
           sudo docker stop rc-fe-stage || true
           sudo docker rm rc-fe-stage || true
