@@ -1,5 +1,5 @@
 # Use Node.js 18 as the base image
-FROM node:18-alpine as builder
+FROM node:20-alpine as builder
 
 # Set working directory
 WORKDIR /app
@@ -20,7 +20,7 @@ RUN npm run build
 RUN npm prune --production
 
 # Use a minimal base image to run the app
-FROM node:18-alpine as runner
+FROM node:20-alpine as runner
 
 # Set working directory
 WORKDIR /app
