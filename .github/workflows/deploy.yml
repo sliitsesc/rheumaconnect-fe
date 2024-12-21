@@ -3,7 +3,6 @@ name: Deploy rc-fe to staging env (azure)
 on:
   push:
     branches:
-      - main
       - develop
 
 jobs:
