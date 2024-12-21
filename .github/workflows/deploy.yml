@@ -25,8 +25,12 @@ jobs:
           docker push pawanlive/rc-fe:latest
 
       - name: Deploy to Azure VM
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.AZURE_VM_SSH_KEY }}
         run: |
-          ssh -o StrictHostKeyChecking=no rheumac@${{ secrets.AZURE_VM_IP }} << 'EOF'
+          echo "$SSH_PRIVATE_KEY" > ssh_key
+          chmod 600 ssh_key
+          ssh -i ssh_key -o StrictHostKeyChecking=no rheumac@${{ secrets.AZURE_VM_IP }} << 'EOF'
           sudo docker pull pawanlive/rc-fe:latest
           sudo docker stop rc-fe-stage || true
           sudo docker rm rc-fe-stage || true
@@ -35,3 +39,4 @@ jobs:
             pawanlive/rc-fe:latest
           exit
           EOF
+          rm ssh_key
