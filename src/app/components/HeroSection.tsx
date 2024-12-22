@@ -34,7 +34,6 @@ const HeroSection = ({ selectedLang }: HeroSectionProps) => {
   return (
     <section className="bg-gradient-to-b from-blue-50 to-white/80 py-16">
       <div className="container mx-auto px-4 lg:px-16 flex flex-col-reverse lg:flex-row items-center gap-8">
-        {/* Text Content */}
         <div className="text-center lg:text-left flex-1 lg:pr-8">
           <h1
             className="text-3xl lg:text-5xl font-bold mb-6 leading-snug"
@@ -53,7 +52,6 @@ const HeroSection = ({ selectedLang }: HeroSectionProps) => {
           </button>
         </div>
 
-        {/* Image */}
         <div className="flex-shrink-0 flex-1">
           <img
             src="/doctor.png"
