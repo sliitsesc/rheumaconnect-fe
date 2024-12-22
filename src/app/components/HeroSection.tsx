@@ -1,6 +1,6 @@
 "use client";
 
-type TranslationKeys = "en" | "si" | "ta";
+type TranslationKeys = "en";
 
 const translations: Record<
   TranslationKeys,
@@ -11,18 +11,6 @@ const translations: Record<
     description:
       "Everything about your pre-diagnosed rheumatic condition is just a button-click away with RheumaConnect.",
     button: "Get Started",
-  },
-  si: {
-    title: "ඔබගේ රوماتික තත්වය සඳහා නොමිලේ විශේෂඥ උපදෙස්",
-    description:
-      "සුදුසු විනිශ්චය කර ඇති රوماتික රෝග තත්වය පිළිබඳ සෑම දෙයක්ම RheumaConnect සමඟ පියවරක් අවටය.",
-    button: "ආරම්භ කරන්න",
-  },
-  ta: {
-    title: "உங்கள் ருமாட்டிக் நிலைக்கு இலவச மருத்துவ ஆலோசனை பெறவும்",
-    description:
-      "உங்கள் முன்பே தீர்மானிக்கப்பட்ட ருமாட்டிக் நிலையின் அனைத்தும் RheumaConnect மூலம் கிடைக்கும்.",
-    button: "தொடங்கவும்",
   },
 };
 
