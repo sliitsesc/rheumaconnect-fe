@@ -40,9 +40,9 @@ RheumaConnect is transforming rheumatic care through an integrated and patient c
 RheumaConnect has successfully completed the design phase and the project is now in the development phase. Currently, the team is focused on building the platform's core features.
 
 ### Roadmap
-Phase 1: Website development and initial content population
-Phase 2: Integration of multilingual support
-Phase 3: Continuous content updates and feedback integration
+- Phase 1: Website development and initial content population
+- Phase 2: Integration of multilingual support
+- Phase 3: Continuous content updates and feedback integration
 
 ---
 
