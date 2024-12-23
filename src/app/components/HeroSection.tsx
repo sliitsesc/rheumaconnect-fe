@@ -1,18 +1,6 @@
-"use client";
+import translations from "../data/translations.json";
 
-type TranslationKeys = "en";
-
-const translations: Record<
-  TranslationKeys,
-  { title: string; description: string; button: string }
-> = {
-  en: {
-    title: "Expert backed, FREE medical advice for your Rheumatic Condition",
-    description:
-      "Everything about your pre-diagnosed rheumatic condition is just a button-click away with RheumaConnect.",
-    button: "Get Started",
-  },
-};
+type TranslationKeys = keyof typeof translations;
 
 type HeroSectionProps = {
   selectedLang: TranslationKeys;
@@ -39,7 +27,6 @@ const HeroSection = ({ selectedLang }: HeroSectionProps) => {
             {translations[selectedLang].button}
           </button>
         </div>
-
         <div className="flex-shrink-0 flex-1">
           <img
             src="/doctor.png"
