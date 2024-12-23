@@ -56,11 +56,14 @@ const Navbar = () => {
   return (
     <header className="bg-white shadow sticky top-0 z-50">
       <div className="container mx-auto px-4 flex items-center justify-between py-4">
-        <Link href="/" className="text-2xl font-bold text-blue-600">
+        <Link
+          href="/"
+          className="text-2xl font-bold text-blue-600 flex-shrink-0"
+        >
           Rheuma<span className="text-gray-800">Connect</span>
         </Link>
 
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center space-x-6 ml-6">
           {[
             { href: "/", label: "Home" },
             { href: "/categories", label: "Categories" },
@@ -77,23 +80,23 @@ const Navbar = () => {
               {label}
             </Link>
           ))}
-          <button className="px-6 py-2 bg-[#2F7CC4] text-white rounded-full hover:bg-[#276ca3] transition">
+
+          <button
+            className="px-5 py-1.5 bg-[#2F7CC4] text-white rounded-full text-sm hover:bg-[#276ca3] transition"
+            style={{ width: "98px", height: "32px" }}
+          >
             Explore
           </button>
 
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={toggleDropdown}
-              className="px-4 py-2 border rounded text-gray-800 flex items-center space-x-2 hover:bg-gray-100 transition"
+              className="px-5 py-1.5 bg-white border border-gray-400 text-gray-800 rounded-full text-sm flex items-center justify-between hover:bg-gray-100 transition"
+              style={{ width: "98px", height: "32px" }}
             >
-              <span>
-                {
-                  languages.find((lang) => lang.value === selectedLanguage)
-                    ?.label
-                }
-              </span>
+              <span>English</span>
               <svg
-                className={`w-4 h-4 transform ${
+                className={`w-4 h-4 text-gray-800 transform ${
                   isDropdownOpen ? "rotate-180" : "rotate-0"
                 }`}
                 fill="none"
@@ -109,8 +112,9 @@ const Navbar = () => {
                 />
               </svg>
             </button>
+
             {isDropdownOpen && (
-              <div className="absolute mt-2 w-40 bg-white border rounded shadow-lg">
+              <div className="absolute mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg">
                 {languages.map(({ label, value }) => (
                   <button
                     key={value}
@@ -193,17 +197,19 @@ const Navbar = () => {
                   {label}
                 </Link>
               ))}
-              <button className="px-6 py-2 bg-[#2F7CC4] text-white rounded-full hover:bg-[#276ca3] transition">
+              <button
+                className="px-6 py-2 bg-[#2F7CC4] text-white rounded-full text-sm hover:bg-[#276ca3] transition"
+                style={{ width: "98px", height: "38px" }}
+              >
                 Explore
               </button>
-
               <div className="mt-4">
                 <div className="relative" ref={dropdownRef}>
                   <button
                     onClick={toggleDropdown}
-                    className="px-4 py-2 border rounded text-gray-800 flex items-center space-x-2 hover:bg-gray-100 transition w-full"
+                    className="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm flex items-center space-x-2 shadow-sm hover:bg-gray-100 transition w-full"
                   >
-                    <span>
+                    <span className="text-black">
                       {
                         languages.find(
                           (lang) => lang.value === selectedLanguage
@@ -211,7 +217,7 @@ const Navbar = () => {
                       }
                     </span>
                     <svg
-                      className={`w-4 h-4 transform ${
+                      className={`w-4 h-4 text-black transform ${
                         isDropdownOpen ? "rotate-180" : "rotate-0"
                       }`}
                       fill="none"
@@ -228,7 +234,7 @@ const Navbar = () => {
                     </svg>
                   </button>
                   {isDropdownOpen && (
-                    <div className="absolute mt-2 w-full bg-white border rounded shadow-lg">
+                    <div className="absolute mt-2 w-full bg-white border border-gray-200 rounded shadow-lg">
                       {languages.map(({ label, value }) => (
                         <button
                           key={value}
