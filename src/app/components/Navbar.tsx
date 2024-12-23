@@ -82,8 +82,8 @@ const Navbar = () => {
           ))}
 
           <button
-            className="px-5 py-1.5 bg-[#2F7CC4] text-white rounded-full text-sm hover:bg-[#276ca3] transition"
-            style={{ width: "98px", height: "32px" }}
+            className="bg-[#2F7CC4] text-white rounded-[10px] text-[14px] font-medium hover:bg-[#276ca3] transition flex items-center justify-center"
+            style={{ width: "98px", height: "38px", lineHeight: "18px" }}
           >
             Explore
           </button>
@@ -91,12 +91,12 @@ const Navbar = () => {
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={toggleDropdown}
-              className="px-5 py-1.5 bg-white border border-gray-400 text-gray-800 rounded-full text-sm flex items-center justify-between hover:bg-gray-100 transition"
-              style={{ width: "98px", height: "32px" }}
+              className="bg-white border border-gray-400 text-gray-800 rounded-[10px] text-[14px] font-medium flex items-center justify-center hover:bg-gray-100 transition"
+              style={{ width: "98px", height: "38px", lineHeight: "18px" }}
             >
               <span>English</span>
               <svg
-                className={`w-4 h-4 text-gray-800 transform ${
+                className={`w-4 h-4 text-black transform ${
                   isDropdownOpen ? "rotate-180" : "rotate-0"
                 }`}
                 fill="none"
