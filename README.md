@@ -1,6 +1,6 @@
 # Project Rheumaconnect
 Helping Rheumatic patients easily access information related to their conditions within the ease of their homes
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/17a272c6-6232-4d11-ab03-be1cb37ee364/deploy-status)](https://app.netlify.com/sites/rheuma/deploys)
 ---
 
 ## 🎯 Project Overview
