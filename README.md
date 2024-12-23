@@ -62,6 +62,7 @@ If you are passionate about making a difference and contributing to the project,
 - Graphic Design: Help create engaging graphics, illustrations, and visual assets for the website and promotional materials.
 - Documentation: Assist in writing documentation for developers, users, and contributors to make the project easier to understand and participate in.
 
+[Click Here](https://www.figma.com/design/Ygf1alhgBbL3IeVSNRQtS7/RheumaConnect-CSR?node-id=131-97&t=nXW6RbrSE1Jx0J0c-1) to view the Figma design file.
 Please take a look at the **CONTRIBUTING.md** file if you would like to get a further understanding of how you can contribute.
 
 ---
