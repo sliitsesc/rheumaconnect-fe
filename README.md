@@ -40,9 +40,12 @@ RheumaConnect is transforming rheumatic care through an integrated and patient c
 RheumaConnect has successfully completed the design phase and the project is now in the development phase. Currently, the team is focused on building the platform's core features.
 
 ### Roadmap
-- Phase 1: Website development and initial content population
-- Phase 2: Integration of multilingual support
-- Phase 3: Continuous content updates and feedback integration
+- Phase 1: Research, design and develop a MVP level app with the base features (release planned 2nd Week of JAN 2025)
+  - Research & Design phase: ✔️ complete
+  - Development: ♻️ in progress
+- Phase 2: Incremental research, design and development of additional features those were left out in phase 1
+
+You can view open tasks and progress on this GitHub project board: [GitHub project board](https://github.com/orgs/sliitsesc/projects/12)
 
 ---
 
@@ -64,8 +67,13 @@ If you are passionate about making a difference and contributing to the project,
 
 Please take a look at the **CONTRIBUTING.md** file if you would like to get a further understanding of how you can contribute.
 
+## Resources
+
+- [Design file](https://www.figma.com/design/Ygf1alhgBbL3IeVSNRQtS7/RheumaConnect-CSR?m=auto&t=r4PCbaaiOTdJ4889-6)
+- [Preview environment](https://rc-stage.matterofcode.dev)
+
 ---
 
 ### 🙏🏽 Acknowledgment
-Thanks to everyone who has taken part in this project. Together, we aim to make a lasting impact on the lives of rheumatic patients ❤️.
+Thanks to everyone who has taken part in this project. Together, we aim to make a lasting impact on the community ❤️
 
