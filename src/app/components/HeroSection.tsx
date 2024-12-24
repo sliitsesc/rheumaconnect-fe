@@ -1,3 +1,4 @@
+import Image from "next/image";
 import translations from "../data/translations.json";
 
 type TranslationKeys = keyof typeof translations;
@@ -28,9 +29,11 @@ const HeroSection = ({ selectedLang }: HeroSectionProps) => {
           </button>
         </div>
         <div className="flex-shrink-0 flex-1">
-          <img
+          <Image
             src="/doctor.png"
             alt="Doctor providing medical advice"
+            width={550}
+            height={550}
             className="w-full lg:w-[550px] rounded-lg shadow-md"
           />
         </div>
