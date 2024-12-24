@@ -1,11 +1,11 @@
 import HeroSection from "./components/HeroSection";
-import MainCatSection from "./components/MainCatSection";
+import MainCategorySection from "./components/MainCategorySection";
 
 export default function Home() {
   return (
     <div>
       <HeroSection selectedLang="en" />
-      <MainCatSection />
+      <MainCategorySection />
     </div>
   );
 }
