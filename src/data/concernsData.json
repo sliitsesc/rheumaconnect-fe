@@ -1,0 +1,34 @@
+{
+  "concerns": [
+    {
+      "title": "Rheumatic Diseases",
+      "link": "#",
+      "icon_path": "/Rheumatic.svg"
+    },
+    {
+      "title": "Diet and Nutrition",
+      "link": "#",
+      "icon_path": "/Diet.svg"
+    },
+    {
+      "title": "Medications",
+      "link": "#",
+      "icon_path": "/Medications.svg"
+    },
+    {
+      "title": "Exercise and Physical Therapy",
+      "link": "#",
+      "icon_path": "/Exercise.svg"
+    },
+    {
+      "title": "Treatment Options",
+      "link": "#",
+      "icon_path": "/Treatment.svg"
+    },
+    {
+      "title": "Appointments and Bookings",
+      "link": "#",
+      "icon_path": "/Appointments.svg"
+    }
+  ]
+}
