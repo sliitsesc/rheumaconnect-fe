@@ -74,7 +74,7 @@ const Navbar = () => {
               key={href}
               href={href}
               className={`hover:text-blue-600 text-gray-800 font-medium ${
-                pathname === href ? "underline text-blue-600" : ""
+                pathname === href ? "text-blue-600" : ""
               }`}
             >
               {label}
