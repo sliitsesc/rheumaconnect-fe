@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Rheumaconnect
+Helping Rheumatic patients easily access information related to their conditions within the ease of their homes
+[![Netlify Status](https://api.netlify.com/api/v1/badges/17a272c6-6232-4d11-ab03-be1cb37ee364/deploy-status)](https://app.netlify.com/sites/rheuma/deploys)
+---
 
-## Getting Started
+## 🎯 Project Overview
+**RheumaConnect** is an innovative digital platform designed to bridge the information gap between rheumatic patients and medical professionals. By providing verified, accessible medical information in multiple languages, we aim to improve patient education and reduce unnecessary hospital visits for basic information needs.
 
-First, run the development server:
+### Core Services
+- Expert Backed Medical Information: Patients can access verified, up to date information about various rheumatic conditions, curated by specialist rheumatologists.
+- Medication Guide: Patients can get comprehensive information about treatment options, medication details, and possible side effects.
+- Multilingual Support: All information available in three languages (English, Sinhala, Tamil) to ensure accessibility for all the patients.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Why RheumaConnect?
+Rheumatic patients often face several challenges,
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Limited access to reliable medical information about their conditions.
+- Difficulty in understanding complex medical terminology.
+- Long waiting times for specialist consultations.
+- Confusion about medication and treatment options.
+- Language barriers in accessing medical information. 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+RheumaConnect is transforming rheumatic care through an integrated and patient centric approach. The platform eliminates the need for patients to wait in long queues at clinics or hospitals by providing instant access to expert verified medical resources. These resources include clear, concise explanations of conditions, treatments, and medication guidelines. This platform supports multiple languages, ensuring that all information is accessible in patients' preferred languages. This enhances comprehension and promotes improved healthcare outcomes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🌟 Key Features
 
-To learn more about Next.js, take a look at the following resources:
+- Tri-lingual support (English, Sinhala, Tamil).
+- Expert verified medical information.
+- Free medical advice for managing rheumatic conditions.
+- Treatment options and medication guides.
+- User-friendly interface designed for accessibility.
+- Comprehensive resource library for various rheumatic conditions.
+- Mobile responsive design for access anywhere, anytime.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Current State
+RheumaConnect has successfully completed the design phase and the project is now in the development phase. Currently, the team is focused on building the platform's core features.
 
-## Deploy on Vercel
+### Roadmap
+- Phase 1: Research, design and develop a MVP level app with the base features (release planned 2nd Week of JAN 2025)
+  - Research & Design phase: ✔️ complete
+  - Development: ♻️ in progress
+- Phase 2: Incremental research, design and development of additional features those were left out in phase 1
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+You can view open tasks and progress on this GitHub project board: [GitHub project board](https://github.com/orgs/sliitsesc/projects/12)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🤝🏽 How You Can Contribute
+If you are passionate about making a difference and contributing to the project, we would love for you to get involved! You can contribute in several ways,
+
+### Technical Contributions
+
+- Frontend Development: Assist in designing the user interface for an intuitive and user-friendly experience.
+- Backend Development: Help in developing the server-side architecture and integration of multilingual capabilities.
+- UI/UX Design: Contribute to creating a visually appealing and accessible design for the platform.
+- Testing: Help with quality assurance by writing test cases, identifying and fixing bugs.
+
+### Non-Technical Contributions
+
+- Content Writing: Contribute by writing static content to the website's key sections.
+- Graphic Design: Help create engaging graphics, illustrations, and visual assets for the website and promotional materials.
+- Documentation: Assist in writing documentation for developers, users, and contributors to make the project easier to understand and participate in.
+
+Please take a look at the **CONTRIBUTING.md** file if you would like to get a further understanding of how you can contribute.
+
+## Resources
+
+- [Design file](https://www.figma.com/design/Ygf1alhgBbL3IeVSNRQtS7/RheumaConnect-CSR?m=auto&t=r4PCbaaiOTdJ4889-6)
+- [Preview environment](https://rc-stage.matterofcode.dev)
+
+---
+
+### 🙏🏽 Acknowledgment
+Thanks to everyone who has taken part in this project. Together, we aim to make a lasting impact on the community ❤️
+
