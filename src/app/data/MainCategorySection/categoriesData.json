@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "image": "/MainCategorySection/mc_1.png",
+    "alt": "Rheumatic Diseases",
+    "title": "Rheumatic Diseases",
+    "description": "Primarily affects the joints, causing pain, swelling, and joint deformity."
+  },
+  {
+    "id": 2,
+    "image": "/MainCategorySection/mc_2.png",
+    "alt": "Osteoarthritis",
+    "title": "Osteoarthritis",
+    "description": "The cartilage in joints breaks down, leading to pain, stiffness, and reduced mobility."
+  },
+  {
+    "id": 3,
+    "image": "/MainCategorySection/mc_3.png",
+    "alt": "Ankylosing Spondylitis",
+    "title": "Ankylosing Spondylitis",
+    "description": "Mainly affects the spine, causing inflammation and leading to the fusion of spinal vertebrae."
+  },
+  {
+    "id": 4,
+    "image": "/MainCategorySection/mc_4.png",
+    "alt": "Scleroderma",
+    "title": "Scleroderma",
+    "description": "A group of diseases that involve the hardening and tightening of the skin and connective tissues."
+  }
+]
