@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function ContactCard() {
   return (
@@ -11,9 +11,9 @@ function ContactCard() {
           </h2>
           <p className="text-center font-[DM Sans] font-normal text-[18px] leading-[24px] text-[#484848] md:text-left md:text-[24px] md:leading-[32px] md:text-[#9E9E9E]">
             Have any questions or need assistance? Reach out to the hospital for
-            appointments, consultations, or general inquiries. We're here to help
-            you with your rheumatic care needs. Our team is committed to providing
-            you with the guidance and support you need.
+            appointments, consultations, or general inquiries. Were here to help
+            you with your rheumatic care needs. Our team is committed to
+            providing you with the guidance and support you need.
           </p>
         </div>
 
@@ -22,8 +22,7 @@ function ContactCard() {
           {/* "Call Kurunegala Hospital" button */}
           <a
             href="tel:0112112889"
-            className="py-[27px] px-[27px] gap-[33px] flex md:gap-0 md:items-center md:py-5 max-w-full md:max-w-[678px] pl-5 w-full bg-[#E7F2FC] rounded-2xl hover:bg-[#D6EAFB] transition"
-          >
+            className="py-[27px] px-[27px] gap-[33px] flex md:gap-0 md:items-center md:py-5 max-w-full md:max-w-[678px] pl-5 w-full bg-[#E7F2FC] rounded-2xl hover:bg-[#D6EAFB] transition">
             <img
               loading="lazy"
               src="./call_icon.svg"
@@ -43,8 +42,7 @@ function ContactCard() {
           {/* "Call Emergency Medical Hotline" button */}
           <a
             href="tel:1990"
-            className="py-[27px] px-[27px] gap-[33px] flex md:gap-0 md:items-center md:py-5 max-w-full md:max-w-[678px] pl-5 w-full bg-[#E7F2FC] rounded-2xl hover:bg-[#D6EAFB] transition"
-          >
+            className="py-[27px] px-[27px] gap-[33px] flex md:gap-0 md:items-center md:py-5 max-w-full md:max-w-[678px] pl-5 w-full bg-[#E7F2FC] rounded-2xl hover:bg-[#D6EAFB] transition">
             <img
               loading="lazy"
               src="./call_icon.svg"
@@ -63,8 +61,6 @@ function ContactCard() {
         </div>
       </div>
     </section>
-
-
   );
 }
 
