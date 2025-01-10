@@ -15,6 +15,7 @@ export default function Home() {
       <CardsSection />
       {/* <ContactCard /> */}
       <MainCategorySection />
+      {/* <ContactCard /> */}
       <AZCards azCards={translationsData["en"]["az-cards"]} />
       <Footer />
     </div>
