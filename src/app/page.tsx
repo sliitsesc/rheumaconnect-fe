@@ -12,8 +12,8 @@ export default function Home() {
     <div>
       <HeroSection selectedLang="en" />
       <CardsSection />
-      <ContactCard />
       <MainCategorySection />
+      <ContactCard />
       <AZCards azCards={translationsData["en"]["az-cards"]} />
     </div>
   );
