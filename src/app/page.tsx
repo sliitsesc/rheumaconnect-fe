@@ -14,7 +14,7 @@ export default function Home() {
       <CardsSection />
       <ContactCard />
       <MainCategorySection />
-      <AZCards azCards={translationsData["si"]["az-cards"]} />
+      <AZCards azCards={translationsData["en"]["az-cards"]} />
     </div>
   );
 }

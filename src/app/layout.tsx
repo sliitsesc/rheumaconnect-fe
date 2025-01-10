@@ -19,8 +19,7 @@ export default function RootLayout({
         className="antialiased"
         style={{
           fontFamily: "'DM Sans', sans-serif",
-        }}
-      >
+        }}>
         <Navbar />
         <main>{children}</main>
       </body>
