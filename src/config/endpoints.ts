@@ -1,4 +1,4 @@
 export const API_ENDPOINTS = {
-  NAVBAR: "/navbar",
+  NAVBAR: "/navbar?populate=link&populate=navbarButton",
   CATEGORIES: "/categories",
 };

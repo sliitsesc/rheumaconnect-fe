@@ -15,9 +15,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const data = await fetch(
-    `${API_URL}${API_ENDPOINTS.NAVBAR}?populate=link&populate=navbarButton`
-  );
+  const data = await fetch(`${API_URL}${API_ENDPOINTS.NAVBAR}`);
   const navbarData = await data.json();
 
   return (
