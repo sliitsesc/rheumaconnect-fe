@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/dm-sans": "^5.1.0",
+    "@heroicons/react": "^2.2.0",
     "heroicons": "^2.2.0",
     "next": "15.0.4",
     "react": "^19.0.0",
