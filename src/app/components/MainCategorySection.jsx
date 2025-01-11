@@ -8,7 +8,7 @@ import categoriesData from "../data/MainCategorySection/categoriesData.json";
 const MainCategorySection = () => {
   return (
     <section className="bg-white py-16">
-      <h2 className="text-black font-extrabold text-4xl text-center">
+      <h2 className="text-black font-bold text-4xl text-center">
         Main Categories
       </h2>
       <p className="text-[#9E9E9E] text-center px-8 py-12 text-2xl">
@@ -29,7 +29,7 @@ const MainCategorySection = () => {
               />
             </div>
             <div className="max-w-[274px] mx-auto">
-              <h4 className="font-extrabold text-2xl text-[#484848] py-4">
+              <h4 className="font-semibold text-2xl text-[#484848] py-4">
                 {category.title}
               </h4>
               <p className="text-[#9E9E9E] py-4">{category.description}</p>
