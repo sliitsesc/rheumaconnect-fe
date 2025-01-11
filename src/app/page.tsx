@@ -8,7 +8,9 @@ import MainCategorySection from "./components/MainCategorySection";
 import Footer from "./components/Footer";
 const translationsData: Translations = translations;
 
-export default function Home() {
+// fetch data from API
+
+export default async function Home() {
   return (
     <div>
       <HeroSection selectedLang="en" />
