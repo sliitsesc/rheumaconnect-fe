@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import "@fontsource/dm-sans";
+import { DM_Sans } from "next/font/google";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-dm-sans",
+});
 
 export const metadata: Metadata = {
   title: "RheumaConnect",
@@ -14,12 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className="antialiased"
-        style={{
-          fontFamily: "'DM Sans', sans-serif",
-        }}>
+    <html lang="en" className={dmSans.variable}>
+      <body className="antialiased font-sans">
         <Navbar />
         <main>{children}</main>
       </body>
