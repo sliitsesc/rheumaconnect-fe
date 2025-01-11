@@ -21,7 +21,9 @@ const Footer = () => {
       {/* Mobile View */}
       <div className="md:hidden flex flex-col mx-auto px-5">
         {/* RheumaConnect Brand Name */}
-        <h3 className="font-bold text-2xl text-black mb-5 text-center">RheumaConnect</h3>
+        <h3 className="font-bold text-2xl text-black mb-5 text-center">
+          RheumaConnect
+        </h3>
 
         {/* Link 1 Dropdown */}
         <button
@@ -37,11 +39,21 @@ const Footer = () => {
         </button>
         {isOpen.link1 && (
           <ul className="bg-white p-3 rounded-lg">
-            <li><a href="#">Tincidunt amet</a></li>
-            <li><a href="#">Himenaeos</a></li>
-            <li><a href="#">Mollis consequat</a></li>
-            <li><a href="#">Facilisi diam</a></li>
-            <li><a href="#">Inceptos blandit</a></li>
+            <li>
+              <a href="#">Tincidunt amet</a>
+            </li>
+            <li>
+              <a href="#">Himenaeos</a>
+            </li>
+            <li>
+              <a href="#">Mollis consequat</a>
+            </li>
+            <li>
+              <a href="#">Facilisi diam</a>
+            </li>
+            <li>
+              <a href="#">Inceptos blandit</a>
+            </li>
           </ul>
         )}
 
@@ -59,11 +71,21 @@ const Footer = () => {
         </button>
         {isOpen.link2 && (
           <ul className="bg-white p-3 rounded-lg">
-            <li><a href="#">Tincidunt amet</a></li>
-            <li><a href="#">Himenaeos</a></li>
-            <li><a href="#">Mollis consequat</a></li>
-            <li><a href="#">Facilisi diam</a></li>
-            <li><a href="#">Inceptos blandit</a></li>
+            <li>
+              <a href="#">Tincidunt amet</a>
+            </li>
+            <li>
+              <a href="#">Himenaeos</a>
+            </li>
+            <li>
+              <a href="#">Mollis consequat</a>
+            </li>
+            <li>
+              <a href="#">Facilisi diam</a>
+            </li>
+            <li>
+              <a href="#">Inceptos blandit</a>
+            </li>
           </ul>
         )}
 
@@ -105,22 +127,42 @@ const Footer = () => {
         <div className="flex flex-col w-2/12">
           <h3 className="font-bold text-2xl mb-5">Links</h3>
           <ul>
-            <li><a href="#">Tincidunt amet</a></li>
-            <li><a href="#">Himenaeos</a></li>
-            <li><a href="#">Mollis consequat</a></li>
-            <li><a href="#">Facilisi diam</a></li>
-            <li><a href="#">Inceptos blandit</a></li>
+            <li>
+              <a href="#">Tincidunt amet</a>
+            </li>
+            <li>
+              <a href="#">Himenaeos</a>
+            </li>
+            <li>
+              <a href="#">Mollis consequat</a>
+            </li>
+            <li>
+              <a href="#">Facilisi diam</a>
+            </li>
+            <li>
+              <a href="#">Inceptos blandit</a>
+            </li>
           </ul>
         </div>
 
         <div className="flex flex-col w-2/12">
           <h3 className="font-bold text-2xl mb-5">Links</h3>
           <ul>
-            <li><a href="#">Tincidunt amet</a></li>
-            <li><a href="#">Himenaeos</a></li>
-            <li><a href="#">Mollis consequat</a></li>
-            <li><a href="#">Facilisi diam</a></li>
-            <li><a href="#">Inceptos blandit</a></li>
+            <li>
+              <a href="#">Tincidunt amet</a>
+            </li>
+            <li>
+              <a href="#">Himenaeos</a>
+            </li>
+            <li>
+              <a href="#">Mollis consequat</a>
+            </li>
+            <li>
+              <a href="#">Facilisi diam</a>
+            </li>
+            <li>
+              <a href="#">Inceptos blandit</a>
+            </li>
           </ul>
         </div>
 
