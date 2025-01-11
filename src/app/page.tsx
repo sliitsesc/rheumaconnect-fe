@@ -7,7 +7,9 @@ import ContactCard from "./components/ContactCard";
 import MainCategorySection from "./components/MainCategorySection";
 const translationsData: Translations = translations;
 
-export default function Home() {
+// fetch data from API
+
+export default async function Home() {
   return (
     <div>
       <HeroSection selectedLang="en" />
