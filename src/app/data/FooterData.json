@@ -1,0 +1,69 @@
+{
+    "brandName": "RheumaConnect",
+    "mobileView": {
+      "dropdowns": [
+        {
+          "name": "Link 1",
+          "links": [
+            "Tincidunt amet",
+            "Himenaeos",
+            "Mollis consequat",
+            "Facilisi diam",
+            "Inceptos blandit"
+          ]
+        },
+        {
+          "name": "Link 2",
+          "links": [
+            "Tincidunt amet",
+            "Himenaeos",
+            "Mollis consequat",
+            "Facilisi diam",
+            "Inceptos blandit"
+          ]
+        },
+        {
+          "name": "Contact",
+          "details": {
+            "address": "453 Prosacco Summit, Port Goldenland, ID 80140",
+            "phone1": "+91 662 782 7698",
+            "phone2": "+91 662 782 7698"
+          }
+        }
+      ]
+    },
+    "desktopView": {
+      "brandDescription": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+      "sections": [
+        {
+          "title": "Links",
+          "links": [
+            "Tincidunt amet",
+            "Himenaeos",
+            "Mollis consequat",
+            "Facilisi diam",
+            "Inceptos blandit"
+          ]
+        },
+        {
+          "title": "Links",
+          "links": [
+            "Tincidunt amet",
+            "Himenaeos",
+            "Mollis consequat",
+            "Facilisi diam",
+            "Inceptos blandit"
+          ]
+        },
+        {
+          "title": "Connect",
+          "details": {
+            "address": "453 Prosacco Summit, Port Goldenland, ID 80140",
+            "phone1": "+91 662 782 7698",
+            "phone2": "+91 662 782 7698"
+          }
+        }
+      ]
+    }
+  }
+  
