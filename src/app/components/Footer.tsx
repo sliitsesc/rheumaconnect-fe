@@ -17,7 +17,7 @@ const Footer = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b to-blue-100 from-white py-16 text-black">
+    <section className="bg-gradient-to-b to-blue-100 from-white py-16 text-black border-t-[1px] border-[#DBEBFB]">
       {/* Mobile View */}
       <div className="md:hidden flex flex-col mx-auto px-5">
         {/* RheumaConnect Brand Name */}
@@ -28,8 +28,7 @@ const Footer = () => {
         {/* Link 1 Dropdown */}
         <button
           onClick={() => toggleDropdown("link1")}
-          className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center"
-        >
+          className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center">
           Link 1
           {isOpen.link1 ? (
             <ChevronUpIcon className="h-6 w-6 text-gray-500" />
@@ -38,7 +37,7 @@ const Footer = () => {
           )}
         </button>
         {isOpen.link1 && (
-          <ul className="bg-white p-3 rounded-lg">
+          <ul className="bg-white p-3 rounded-lg mb-4">
             <li>
               <a href="#">Tincidunt amet</a>
             </li>
@@ -60,8 +59,7 @@ const Footer = () => {
         {/* Link 2 Dropdown */}
         <button
           onClick={() => toggleDropdown("link2")}
-          className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center"
-        >
+          className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center">
           Link 2
           {isOpen.link2 ? (
             <ChevronUpIcon className="h-6 w-6 text-gray-500" />
@@ -92,8 +90,7 @@ const Footer = () => {
         {/* Contact Dropdown */}
         <button
           onClick={() => toggleDropdown("contact")}
-          className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center"
-        >
+          className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center">
           Contact
           {isOpen.contact ? (
             <ChevronUpIcon className="h-6 w-6 text-gray-500" />

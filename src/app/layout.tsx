@@ -5,6 +5,7 @@ import "@fontsource/dm-sans";
 import { API_ENDPOINTS } from "@/config/endpoints";
 import { API_URL } from "@/config";
 import { DM_Sans } from "next/font/google";
+import Footer from "./components/Footer";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -26,11 +27,11 @@ export default async function RootLayout({
   const navbarData = await data.json();
 
   return (
-
     <html lang="en" className={dmSans.variable}>
       <body className="antialiased font-sans">
         <Navbar data={navbarData?.data} />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
