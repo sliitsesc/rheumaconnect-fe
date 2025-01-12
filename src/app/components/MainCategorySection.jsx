@@ -1,6 +1,3 @@
-// // This is the MainCatSection component which is responsible for rendering the main categories section of the website. It uses the categoriesData.json file to get the data for the categories.
-// // Path of the data json file: src\app\data\MainCatSection\categoriesData.json
-
 import React from "react";
 import Image from "next/image";
 import categoriesData from "../data/MainCategorySection/categoriesData.json";
@@ -18,8 +15,7 @@ const MainCategorySection = () => {
         {categoriesData.map((category) => (
           <div
             key={category.id}
-            className="p-8 cursor-pointer border-2 border-transparent hover:border-[#DBEBFB] rounded-xl transition duration-500"
-          >
+            className="p-8 cursor-pointer border-2 border-transparent hover:border-[#DBEBFB] rounded-xl transition duration-500">
             <div className="relative max-w-[274px] max-h-[103px] mx-auto aspect-[274/103]">
               <Image
                 src={category.image}
