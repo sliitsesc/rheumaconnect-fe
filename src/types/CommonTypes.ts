@@ -1,8 +1,12 @@
+// strapi image type
 export interface ImageType {
-  url: string;
-  alt: string;
-  width?: number;
-  height?: number;
+  id: string;
+  documentId: string;
+  name: string;
+  alternativeText: string;
+  caption: string;
+  width: number;
+  height: number;
 }
 
 export interface NavbarType {
@@ -37,6 +41,26 @@ export interface Category {
   subtitle: string;
   slug: string;
   subcategories: Subcategory[];
+}
+
+export interface SubcategoryType {
+  id: string;
+  documentId: string;
+  name: string;
+  subtitle: string;
+  slug: string;
+  articles: Article[];
+}
+
+export interface Article {
+  id: string;
+  documentId: string;
+  title: string;
+  slug: string;
+  description: string;
+  category: string;
+  subcategory: string;
+  thumbnailImage: ImageType;
 }
 
 export interface Subcategory {

@@ -3,14 +3,9 @@ import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import "@fontsource/dm-sans";
 import { API_ENDPOINTS } from "@/config/endpoints";
-import { API_URL } from "@/config";
 import { DM_Sans } from "next/font/google";
 import Footer from "./components/Footer";
-import {
-  ApiResponse,
-  ApiResponseSingle,
-  NavbarType,
-} from "@/types/CommonTypes";
+import { ApiResponseSingle, NavbarType } from "@/types/CommonTypes";
 import { getData } from "@/lib/helpers/dataFetchHelper";
 
 const dmSans = DM_Sans({
