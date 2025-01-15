@@ -1,6 +1,6 @@
 // import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import "@fontsource/dm-sans";
 import { API_ENDPOINTS } from "@/config/endpoints";
 import { API_URL } from "@/config";
