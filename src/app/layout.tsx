@@ -6,6 +6,12 @@ import { API_ENDPOINTS } from "@/config/endpoints";
 import { API_URL } from "@/config";
 import { DM_Sans } from "next/font/google";
 import Footer from "./components/Footer";
+import {
+  ApiResponse,
+  ApiResponseSingle,
+  NavbarType,
+} from "@/types/CommonTypes";
+import { getData } from "@/lib/helpers/dataFetchHelper";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -23,13 +29,14 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const data = await fetch(`${API_URL}${API_ENDPOINTS.NAVBAR}`);
-  const navbarData = await data.json();
+  const navbarResponse: ApiResponseSingle<NavbarType> = await getData(
+    `${API_ENDPOINTS.NAVBAR}`
+  );
 
   return (
     <html lang="en" className={dmSans.variable}>
       <body className="antialiased font-sans">
-        <Navbar data={navbarData?.data} />
+        <Navbar data={navbarResponse?.data} />
         <main>{children}</main>
         <Footer />
       </body>

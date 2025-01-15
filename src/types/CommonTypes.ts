@@ -5,14 +5,15 @@ export interface ImageType {
   height?: number;
 }
 
-export interface NavbarDataType {
-  link: NavbarLinkType[];
-  navbarButton: ButtonType;
+export interface NavbarType {
+  link: LinkType[];
+  navbarButton: ButtonType[];
 }
 
-export interface NavbarLinkType {
+export interface LinkType {
+  id: string;
   linkText: string;
-  linkUrl?: string | null;
+  linkUrl: string;
 }
 
 export interface ButtonType {
@@ -23,6 +24,10 @@ export interface ButtonType {
 //#region Categories
 export interface ApiResponse<T> {
   data: T[];
+}
+
+export interface ApiResponseSingle<T> {
+  data: T;
 }
 
 export interface Category {
