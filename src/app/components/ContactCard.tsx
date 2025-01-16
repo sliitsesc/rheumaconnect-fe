@@ -2,10 +2,10 @@ import React from "react";
 
 function ContactCard() {
   return (
-    <section className="relative max-w-[1512px] mx-auto py-[58px] px-[32px] lg:px-0 gap-[10px] md:gap-0 bg-white">
-      <div className="container md:pl-[67px] md:pr-[67px] mx-auto flex flex-col md:flex-row items-center gap-[67px]  md:mt-[130px] md:mb-[130px] ">
+    <section className="relative mx-auto py-[58px] px-[32px] lg:px-0 gap-[10px] md:gap-0 bg-white">
+      <div className="container md:pl-[67px] md:pr-[67px] mx-auto flex flex-col md:flex-row items-center gap-[67px] justify-between md:mt-[130px] md:mb-[130px] ">
         {/* Text container */}
-        <div className="text flex flex-col gap-6 max-w-[633px] min-h-[240px] order-1 md:order-2">
+        <div className="text flex flex-col gap-6 w-full md:w-3/5 min-h-[240px] order-1 md:order-2">
           <h2 className="font-bold text-[32px] leading-[41.66px] text-[#484848] font-[DM Sans] text-center md:text-[42px] md:leading-[54.68px] md:text-[#484848] md:text-left md:w-auto md:h-auto">
             Seek Medical Help
           </h2>
@@ -22,8 +22,7 @@ function ContactCard() {
           {/* "Call Kurunegala Hospital" button */}
           <a
             href="tel:0112112889"
-            className="py-[27px] px-[27px] gap-[33px] flex md:gap-0 md:items-center md:py-5 max-w-full md:max-w-[678px] pl-5 w-full bg-[#E7F2FC] rounded-2xl hover:bg-[#D6EAFB] transition"
-          >
+            className="py-[27px] px-[27px] gap-[33px] flex md:gap-0 md:items-center md:py-5 max-w-full md:max-w-[678px] pl-5 w-full bg-[#E7F2FC] rounded-2xl hover:bg-[#D6EAFB] transition">
             <img
               loading="lazy"
               src="./call_icon.svg"
@@ -43,8 +42,7 @@ function ContactCard() {
           {/* "Call Emergency Medical Hotline" button */}
           <a
             href="tel:1990"
-            className="py-[27px] px-[27px] gap-[33px] flex md:gap-0 md:items-center md:py-5 max-w-full md:max-w-[678px] pl-5 w-full bg-[#E7F2FC] rounded-2xl hover:bg-[#D6EAFB] transition"
-          >
+            className="py-[27px] px-[27px] gap-[33px] flex md:gap-0 md:items-center md:py-5 max-w-full md:max-w-[678px] pl-5 w-full bg-[#E7F2FC] rounded-2xl hover:bg-[#D6EAFB] transition">
             <img
               loading="lazy"
               src="./call_icon.svg"
