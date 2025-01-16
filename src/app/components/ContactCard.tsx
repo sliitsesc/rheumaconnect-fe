@@ -6,7 +6,7 @@ function ContactCard() {
       <div className="container md:pl-[67px] md:pr-[67px] mx-auto flex flex-col md:flex-row items-center gap-[67px]  md:mt-[130px] md:mb-[130px] ">
         {/* Text container */}
         <div className="text flex flex-col gap-6 max-w-[633px] min-h-[240px] order-1 md:order-2">
-          <h2 className="font-extrabold text-[32px] leading-[41.66px] text-[#484848] font-[DM Sans] text-center md:text-[42px] md:leading-[54.68px] md:text-[#484848] md:text-left md:w-auto md:h-auto">
+          <h2 className="font-bold text-[32px] leading-[41.66px] text-[#484848] font-[DM Sans] text-center md:text-[42px] md:leading-[54.68px] md:text-[#484848] md:text-left md:w-auto md:h-auto">
             Seek Medical Help
           </h2>
           <p className="text-center font-[DM Sans] font-normal text-[18px] leading-[24px] text-[#484848] md:text-left md:text-[24px] md:leading-[32px] md:text-[#9E9E9E]">
@@ -31,10 +31,10 @@ function ContactCard() {
               className="w-[42.15px] h-[42.15px] translate-y-[6px] md:w-16 md:h-16 md:object-contain md:mr-5 md:translate-y-[0]"
             />
             <div className="flex flex-col">
-              <div className="w-[176px] h-[56px] text-[#484848] font-[DM Sans] text-[20px] font-semibold leading-[28px] text-left md:w-auto md:h-auto md:text-[#484848] md:font-semibold md:text-[32px] md:leading-[28px]">
+              <div className="w-[176px] h-[56px] text-[#484848] font-[DM Sans] text-[20px] font-medium leading-[24px] text-left md:w-auto md:h-auto md:text-[#484848] md:font-semibold md:text-[24px] md:leading-[24px]">
                 Call Kurunegala Hospital
               </div>
-              <div className="mt-1.5 text-[#9E9E9E] font-semibold text-[28px] leading-[28px] hidden md:block">
+              <div className="mt-1.5 text-[#9E9E9E] font-normal text-[24px] leading-[28px] hidden md:block">
                 0112 112 889
               </div>
             </div>
@@ -52,10 +52,10 @@ function ContactCard() {
               className="w-[42.15px] h-[42.15px] translate-y-[6px] md:w-16 md:h-16 md:object-contain md:mr-5 md:translate-y-[0]"
             />
             <div className="flex flex-col">
-              <div className="w-[176px] h-[56px] text-[#484848] font-[DM Sans] text-[20px] font-semibold leading-[28px] text-left md:w-auto md:h-auto md:text-[#484848] md:font-semibold md:text-[32px] md:leading-[28px]">
+              <div className="w-[176px] h-[56px] text-[#484848] font-[DM Sans] text-[20px] font-medium leading-[24px] text-left md:w-auto md:h-auto md:text-[#484848] md:font-semibold md:text-[24px] md:leading-[24px]">
                 Call Emergency Medical Hotline
               </div>
-              <div className="mt-1.5 text-[#9E9E9E] font-semibold text-[28px] leading-[28px] hidden md:block">
+              <div className="mt-1.5 text-[#9E9E9E] font-normal text-[24px] leading-[28px] hidden md:block">
                 1990
               </div>
             </div>

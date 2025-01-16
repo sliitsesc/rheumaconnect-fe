@@ -2,7 +2,7 @@ import HeroSection from "./components/HeroSection";
 import AZCards from "@/app/components/AZCards";
 import translations from "@/app/data/translations.json";
 import { Translations } from "@/app/types";
-// import ContactCard from "./components/ContactCard";
+import ContactCard from "./components/ContactCard";
 import MainCategorySection from "./components/MainCategorySection";
 const translationsData: Translations = translations;
 
@@ -14,7 +14,7 @@ export default async function Home() {
       <HeroSection selectedLang="en" />
       {/* <ContactCard /> */}
       <MainCategorySection />
-      {/* <ContactCard /> */}
+      <ContactCard />
       <AZCards azCards={translationsData["en"]["az-cards"]} />
     </div>
   );
