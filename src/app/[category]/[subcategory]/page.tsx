@@ -23,8 +23,9 @@ export default async function Page({
       </section>
 
       {/* map & render all article cards here */}
-      <section>
+      <section className="container mx-auto flex flex-row flex-wrap gap-4 justify-between px-60 my-10">
         {/* use articles.map(........) here */}
+        <ArticleCard /> <ArticleCard />
         <ArticleCard />
       </section>
     </>
