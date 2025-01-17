@@ -11,7 +11,7 @@ const AZCards = ({ azCards }: AZCardsProps) => {
 
   return (
     <div
-      className="container w-full max-w-[1512px] h-auto px-[67px] py-[82px] flex flex-col md:flex-row md:justify-between gap-6 mx-auto"
+      className="container w-full max-w-[1512px] h-auto px-[67px] py-32 flex flex-col md:flex-row md:justify-between gap-6 mx-auto"
       style={{ background: "#FFFFFF" }}
     >
       {/* Health A to Z */}

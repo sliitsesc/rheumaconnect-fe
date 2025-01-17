@@ -4,7 +4,7 @@ import categoriesData from "../data/MainCategorySection/categoriesData.json";
 
 const MainCategorySection = () => {
   return (
-    <section className=" container bg-white py-16 mx-auto">
+    <section className=" container bg-white py-12 mx-auto">
       <h2 className="text-[#484848] font-bold text-4xl text-center">
         Main Categories
       </h2>
@@ -15,7 +15,8 @@ const MainCategorySection = () => {
         {categoriesData.map((category) => (
           <div
             key={category.id}
-            className="p-8 cursor-pointer border-2 border-transparent hover:border-[#DBEBFB] rounded-xl transition duration-500">
+            className="p-8 cursor-pointer border-2 border-transparent hover:border-[#DBEBFB] rounded-xl transition duration-500"
+          >
             <div className="relative max-w-[274px] max-h-[103px] mx-auto aspect-[274/103]">
               <Image
                 src={category.image}
