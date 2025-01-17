@@ -3,19 +3,20 @@ import { API_ENDPOINTS } from "@/config/endpoints";
 import { getData } from "@/lib/helpers/dataFetchHelper";
 import { ApiResponse, Article } from "@/types/CommonTypes";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function Page({
   params,
 }: {
-  params: { article: string };
+  params: { article: string; category: string; subcategory: string };
 }) {
+  const { category, subcategory } = await params;
+
   const articleSlug = (await params).article;
-  console.log(articleSlug);
 
   const response: ApiResponse<Article> = await getData(
     `${API_ENDPOINTS.ARTICLES}?filters[slug][$eq]=${articleSlug}`
   );
-  console.log("yy", response);
   const [{ title, publishedAt, description }] = response.data; // select first object in array, and destructure properties
 
   const publishedDate = new Date(publishedAt).toLocaleDateString("en-US", {
@@ -27,12 +28,61 @@ export default async function Page({
   return (
     <>
       <section className="flex flex-col items-start h-auto bg-gradient-to-r from-blue-100 to-white p-10">
+        {/* Breadcrumbs Section */}
+        <nav className="text-sm text-gray-600 mb-4">
+          <ul className="flex items-center gap-2">
+            <li>
+              <Link href={`/${category}`} className="hover:text-blue-600">
+                {category}
+              </Link>
+            </li>
+            <li className="text-lg">{">"}</li>
+            <li>
+              <Link
+                href={`/${category}/${subcategory}`}
+                className="hover:text-blue-600"
+              >
+                {subcategory}
+              </Link>
+            </li>
+            <li className="text-lg">{">"}</li>
+            <li className="text-gray-800 font-semibold">{title}</li>
+          </ul>
+        </nav>
+
+        {/* Article Header Section */}
         <h1 className="text-4xl font-bold text-gray-800 mb-4 text-left">
           {title}
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mb-4 text-left">
-          {publishedDate} | by Dr. Nishantha Perera
-        </p>
+        <div className="flex flex-wrap justify-between items-center w-full mb-4">
+          <p className="text-lg text-gray-600 max-w-2xl text-left">
+            {publishedDate} | by Dr. Nishantha Perera
+          </p>
+
+          <div className="flex items-center gap-4">
+            <p className="text-lg text-gray-600 max-w-2xl  text-left">
+              Select Language
+            </p>
+            <button
+              className=" flex items-center gap-2 text-white text-lg px-3 py-1 rounded-md shadow hover:brightness-110 transition"
+              style={{ backgroundColor: "#2F7CC4" }}
+            >
+              English
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="size-6"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
 
         <div className="w-full">
           <Image
@@ -41,6 +91,7 @@ export default async function Page({
             width={550}
             height={550}
             className="w-full h-[300px] object-cover rounded-lg shadow-md mb-4"
+            priority
           />
         </div>
 
@@ -70,13 +121,6 @@ export default async function Page({
           </button>
         </section>
       </section>
-
-      {/* map & render all article cards here */}
-      {/* <section className="container mx-auto flex flex-row flex-wrap gap-4 justify-between px-60 my-10"> */}
-      {/* use articles.map(........) here */}
-      {/* <ArticleCard /> <ArticleCard /> */}
-      {/* <ArticleCard /> */}
-      {/* </section> */}
     </>
   );
 }
