@@ -1,5 +1,5 @@
 import Image from "next/image";
-import translations from "../data/translations.json";
+import translations from "../../../data/translations.json";
 
 type TranslationKeys = keyof typeof translations;
 
@@ -14,17 +14,13 @@ const HeroSection = ({ selectedLang }: HeroSectionProps) => {
         <div className="text-center lg:text-left flex-1 lg:pr-8">
           <h1
             className="text-3xl lg:text-5xl font-bold mb-6 leading-snug"
-            style={{ color: "#484848" }}
-          >
+            style={{ color: "#484848" }}>
             {translations[selectedLang].title}
           </h1>
           <p className="text-lg mb-6" style={{ color: "#555555" }}>
             {translations[selectedLang].description}
           </p>
-          <button
-            className="text-white px-8 py-3 text-lg rounded-md shadow hover:brightness-110 transition"
-            style={{ backgroundColor: "#2F7CC4" }}
-          >
+          <button className="text-white px-8 py-3 text-lg rounded-md shadow hover:brightness-110 transition bg-[#2F7CC4]">
             {translations[selectedLang].button}
           </button>
         </div>
@@ -34,7 +30,7 @@ const HeroSection = ({ selectedLang }: HeroSectionProps) => {
             alt="Doctor providing medical advice"
             width={550}
             height={550}
-            className="w-full lg:w-[550px] rounded-lg shadow-md"
+            className="w-full lg:w-full lg:h-[445px] rounded-lg shadow-md object-cover"
           />
         </div>
       </div>

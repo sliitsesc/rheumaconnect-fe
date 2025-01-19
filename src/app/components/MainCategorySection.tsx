@@ -16,18 +16,19 @@ export default async function MainCategorySection() {
     const categories = response.data;
 
   return (
-    <section className="bg-white py-16">
-      <h2 className="text-black font-bold text-4xl text-center">
+    <section className=" container bg-white py-12 mx-auto">
+      <h2 className="text-[#484848] font-bold text-4xl text-center">
         Main Categories
       </h2>
-      <p className="text-[#9E9E9E] text-center px-8 py-12 text-2xl">
+      <p className="text-[#9E9E9E] text-center px-8 py-8 text-2xl">
         Some of the most common types Rheumatic diseases
       </p>
       <div className="categories flex flex-wrap justify-center gap-4 px-8">
         {categories.map((category) => (
           <div
             key={category.id}
-            className="p-8 cursor-pointer border-2 border-transparent hover:border-[#DBEBFB] rounded-xl transition duration-500">
+            className="p-8 cursor-pointer border-2 border-transparent hover:border-[#DBEBFB] rounded-xl transition duration-500"
+          >
             <div className="relative max-w-[274px] max-h-[103px] mx-auto aspect-[274/103]">
               <Image
                 src={`${API_BASE_URL}${category.image.url}`}
