@@ -3,7 +3,7 @@
 import React, { useState, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NavbarDataType } from "@/types/CommonTypes";
+import { NavbarType } from "@/types/CommonTypes";
 
 // const languages = [
 //   { label: "English", value: "en" },
@@ -11,7 +11,7 @@ import { NavbarDataType } from "@/types/CommonTypes";
 //   { label: "தமிழ்", value: "ta" },
 // ];
 
-export default function Navbar({ data }: { data: NavbarDataType }) {
+export default function Navbar({ data }: { data: NavbarType }) {
   const { link, navbarButton } = data;
 
   const [isOpen, setIsOpen] = useState(false);

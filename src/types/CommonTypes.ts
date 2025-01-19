@@ -12,7 +12,7 @@ export interface ImageType {
 
 export interface NavbarType {
   link: LinkType[];
-  navbarButton: ButtonType[];
+  navbarButton: ButtonType;
 }
 
 export interface LinkType {
@@ -60,10 +60,10 @@ export interface Article {
   title: string;
   slug: string;
   description: string;
-  category: string;
-  subcategory: string;
+  categorySlug: string;
+  subcategorySlug: string;
   thumbnailImage: ImageType;
-  publishedAt: string;
+  publishedAt?: Date;
 }
 
 export interface Subcategory {

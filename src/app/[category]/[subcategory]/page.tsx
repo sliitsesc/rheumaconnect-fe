@@ -8,25 +8,13 @@ export default async function Page({
 }: {
   params: Promise<{ category: string; subcategory: string }>;
 }) {
+  const { category, subcategory } = await params;
+
   const response: ApiResponse<SubcategoryType> = await getData(
-    `${API_ENDPOINTS.SUBCATEGORIES}?filters[slug][$eq]=${
-      (
-        await params
-      ).subcategory
-    }&populate=articles`
+    `${API_ENDPOINTS.SUBCATEGORIES}?filters[slug][$eq]=${subcategory}&populate=articles&populate=articles.thumbnailImage`
   );
 
   const [{ name, subtitle, articles }] = response.data;
-
-  // Map and transform articles to match the expected props
-
-  const transformedArticles = articles.map((article) => ({
-    id: article.id,
-    title: article.title,
-    description: article.description,
-    imageUrl: article?.thumbnailImage?.url, // Matches the expected `imageUrl` field
-    slug: article.slug,
-  }));
 
   return (
     <>
@@ -35,11 +23,21 @@ export default async function Page({
         <p className="text-lg text-gray-600 max-w-2xl">{subtitle}</p>
       </section>
 
-      <ArticleCard
-        articles={transformedArticles}
-        categorySlug={(await params).category}
-        subcategorySlug={(await params).subcategory}
-      />
+      <section className="container mx-auto px-[24px] xl:px-[220px] my-24 gap-4 grid md:grid-cols-2">
+        {articles?.map((article, index) => {
+          return (
+            <ArticleCard
+              key={index}
+              title={article?.title}
+              description={article?.description}
+              slug={article?.slug}
+              categorySlug={category}
+              subcategorySlug={subcategory}
+              thumbnailImage={article?.thumbnailImage}
+            />
+          );
+        })}
+      </section>
     </>
   );
 }

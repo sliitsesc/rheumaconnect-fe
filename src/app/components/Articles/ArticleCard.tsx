@@ -1,55 +1,49 @@
+import { API_BASE_URL } from "@/config";
+import { ImageType } from "@/types/CommonTypes";
 import Image from "next/image";
 import Link from "next/link";
+import BrokenImagePlaceholder from "/public/common/broken-image-placeholder.png";
+import { truncateText } from "@/lib/utils/truncateText";
 
-interface ArticleCardProps {
+export interface ArticleCardProps {
+  title: string;
+  slug: string;
+  description: string;
   categorySlug: string;
   subcategorySlug: string;
-  articles: Array<{
-    description: string;
-    id: number;
-    title: string;
-    imageUrl: string;
-    slug: string;
-  }>;
+  thumbnailImage: ImageType;
 }
 
 export default function ArticleCard({
-  articles,
+  title,
+  slug,
+  description,
   categorySlug,
   subcategorySlug,
+  thumbnailImage,
 }: ArticleCardProps) {
   return (
-    <section className="p-6">
-      {/* <h1 className="text-3xl font-bold text-center text-black mb-4">{name}</h1>
-      <p className="text-center text-gray-600 mb-8">{subtitle}</p> */}
-
-      {/* Responsive grid layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {articles.map((article) => (
-          <div
-            key={article.id}
-            className="bg-gradient-to-r from-[#eaf5ff98] to-[#f4f9ff86] p-6 rounded-xl">
-            <Image
-              className="w-full h-[150px] object-cover object-center rounded-lg"
-              src={article.imageUrl || "/placeholder.png"} // Fallback image if none provided
-              alt={article.title}
-              width={1000}
-              height={1000}
-            />
-            <h2 className="font-semibold text-2xl text-black mt-4">
-              {article.title}
-            </h2>
-            <p className="text-black m-1">
-              {article.description.slice(0, 100)}...
-            </p>
-            <Link href={`/${categorySlug}/${subcategorySlug}/${article.slug}`}>
-              <button className="bg-transparent text-[#2F7CC4] border-2 border-[#2F7CC4] w-full h-10 rounded-[12px] text-[16px] font-medium hover:bg-[#276ca3] hover:text-white transition flex items-center justify-center">
-                Explore more
-              </button>
-            </Link>
-          </div>
-        ))}
-      </div>
-    </section>
+    <div
+      key={title}
+      className="flex flex-col gap-y-3 bg-gradient-to-r from-[#eaf5ff98] to-[#f4f9ff86] p-6 rounded-xl shadow-sm">
+      <Image
+        className="w-full h-[150px] object-cover object-center rounded-lg"
+        src={
+          thumbnailImage
+            ? `${API_BASE_URL}${thumbnailImage?.url}`
+            : BrokenImagePlaceholder
+        }
+        alt={title}
+        width={1000}
+        height={600}
+      />
+      <h2 className="font-semibold text-2xl text-black">{title}</h2>
+      <p className="text-black ml-[1px]">{truncateText(description, 160)}</p>
+      <Link href={`/${categorySlug}/${subcategorySlug}/${slug}`}>
+        <button className="bg-transparent text-[#2F7CC4] border-[2px] border-[#2F7CC4] w-full h-10 rounded-[10px] text-[16px] font-medium hover:bg-[#276ca3] hover:text-white transition flex items-center justify-center">
+          Read More
+        </button>
+      </Link>
+    </div>
   );
 }

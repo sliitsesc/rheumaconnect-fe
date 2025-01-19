@@ -4,6 +4,7 @@ import { getData } from "@/lib/helpers/dataFetchHelper";
 import { API_ENDPOINTS } from "@/config/endpoints";
 import { API_BASE_URL } from "@/config";
 import Link from "next/link";
+import { truncateText } from "@/lib/utils/truncateText";
 
 export default async function MainCategorySection() {
   const response: ApiResponse<Category> = await getData(
@@ -26,7 +27,7 @@ export default async function MainCategorySection() {
             <div
               key={category.id}
               className="p-8 cursor-pointer border-2 border-transparent hover:border-[#DBEBFB] rounded-xl transition duration-500">
-              <div className="relative max-w-[274px] max-h-[103px] mx-auto aspect-[274/103]">
+              <div className="relative max-w-[274px] max-h-[103px] mx-auto aspect-[274/103] mb-4">
                 <Image
                   src={`${API_BASE_URL}${category.image?.url}`}
                   alt={category?.image?.alternativeText}
@@ -35,10 +36,12 @@ export default async function MainCategorySection() {
                 />
               </div>
               <div className="max-w-[274px] mx-auto">
-                <h4 className="font-semibold text-2xl text-[#484848] py-4">
+                <h4 className="font-semibold text-2xl text-[#484848] mb-3">
                   {category.name}
                 </h4>
-                <p className="text-[#9E9E9E] py-4">{category.subtitle}</p>
+                <p className="text-[#9E9E9E]">
+                  {truncateText(category?.subtitle, 100)}
+                </p>
               </div>
             </div>
           </Link>
