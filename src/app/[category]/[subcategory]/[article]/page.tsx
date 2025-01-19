@@ -14,6 +14,7 @@ export default async function Page({
   const response: ApiResponse<Article> = await getData(
     `${API_ENDPOINTS.ARTICLES}?filters[slug][$eq]=${article}`
   );
+
   const [{ title, publishedAt, description }] = response.data;
 
   const publishedDate = new Date(publishedAt).toLocaleDateString("en-US", {

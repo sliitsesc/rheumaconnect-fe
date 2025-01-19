@@ -1,6 +1,17 @@
-import { Article } from "@/types/CommonTypes";
+import { API_BASE_URL } from "@/config";
+import { ImageType } from "@/types/CommonTypes";
 import Image from "next/image";
 import Link from "next/link";
+import BrokenImagePlaceholder from "/public/common/broken-image-placeholder.png";
+
+export interface ArticleCardProps {
+  title: string;
+  slug: string;
+  description: string;
+  categorySlug: string;
+  subcategorySlug: string;
+  thumbnailImage: ImageType;
+}
 
 export default function ArticleCard({
   title,
@@ -9,23 +20,30 @@ export default function ArticleCard({
   categorySlug,
   subcategorySlug,
   thumbnailImage,
-}: Article) {
+}: ArticleCardProps) {
   return (
     <div
       key={title}
-      className="bg-gradient-to-r from-[#eaf5ff98] to-[#f4f9ff86] p-6 rounded-xl">
+      className="flex flex-col gap-y-3 bg-gradient-to-r from-[#eaf5ff98] to-[#f4f9ff86] p-6 rounded-xl shadow-sm">
       <Image
         className="w-full h-[150px] object-cover object-center rounded-lg"
-        src={thumbnailImage?.url}
+        src={
+          thumbnailImage
+            ? `${API_BASE_URL}${thumbnailImage?.url}`
+            : BrokenImagePlaceholder
+        }
+        // src={
+        //   "https://images.unsplash.com/photo-1737204310662-4d4a541ce471?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        // }
         alt={title}
         width={1000}
         height={600}
       />
-      <h2 className="font-semibold text-2xl text-black mt-4">{title}</h2>
-      <p className="text-black m-1">{description}</p>
+      <h2 className="font-semibold text-2xl text-black">{title}</h2>
+      <p className="text-black ml-[1px]">{description}</p>
       <Link href={`/${categorySlug}/${subcategorySlug}/${slug}`}>
-        <button className="bg-transparent text-[#2F7CC4] border-2 border-[#2F7CC4] w-full h-10 rounded-[12px] text-[16px] font-medium hover:bg-[#276ca3] hover:text-white transition flex items-center justify-center">
-          Explore more
+        <button className="bg-transparent text-[#2F7CC4] border-[2px] border-[#2F7CC4] w-full h-10 rounded-[10px] text-[16px] font-medium hover:bg-[#276ca3] hover:text-white transition flex items-center justify-center">
+          Read More
         </button>
       </Link>
     </div>
