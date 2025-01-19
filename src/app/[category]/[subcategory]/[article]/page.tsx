@@ -15,13 +15,17 @@ export default async function Page({
     `${API_ENDPOINTS.ARTICLES}?filters[slug][$eq]=${article}`
   );
 
+  console.log(response);
+
   const [{ title, publishedAt, description }] = response.data;
 
-  const publishedDate = new Date(publishedAt).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
+  const publishedDate = publishedAt
+    ? new Date(publishedAt).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })
+    : "No date available";
 
   return (
     <>

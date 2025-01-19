@@ -28,10 +28,12 @@ export default async function RootLayout({
     `${API_ENDPOINTS.NAVBAR}`
   );
 
+  const navbarData = navbarResponse?.data;
+
   return (
     <html lang="en" className={dmSans.variable}>
       <body className="antialiased font-sans">
-        <Navbar data={navbarResponse?.data} />
+        <Navbar data={navbarData} />
         <main>{children}</main>
         <Footer />
       </body>

@@ -12,7 +12,7 @@ export interface ImageType {
 
 export interface NavbarType {
   link: LinkType[];
-  navbarButton: ButtonType[];
+  navbarButton: ButtonType;
 }
 
 export interface LinkType {

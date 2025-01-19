@@ -25,7 +25,6 @@ export default async function Page({
 
       <section className="container mx-auto px-[24px] xl:px-[220px] my-24 gap-4 grid md:grid-cols-2">
         {articles?.map((article, index) => {
-          // console.log(article);
           return (
             <ArticleCard
               key={index}
