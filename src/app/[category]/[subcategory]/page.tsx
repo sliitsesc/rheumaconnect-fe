@@ -15,7 +15,7 @@ export default async function Page({
   const [{ name, subtitle, articles }] = response.data;
 
   // Map and transform articles to match the expected props
-  
+
   const transformedArticles = articles.map((article: any) => ({
     id: article.id,
     title: article.title,
@@ -31,7 +31,11 @@ export default async function Page({
         <p className="text-lg text-gray-600 max-w-2xl">{subtitle}</p>
       </section>
 
-      <ArticleCard name={name} subtitle={subtitle} articles={transformedArticles} />
+      <ArticleCard
+        name={name}
+        subtitle={subtitle}
+        articles={transformedArticles}
+      />
     </>
   );
 }
