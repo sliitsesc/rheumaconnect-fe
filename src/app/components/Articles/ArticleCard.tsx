@@ -8,7 +8,6 @@ interface ArticleCardProps {
     description: string;
     id: number;
     title: string;
-    content: string;
     imageUrl: string;
     slug: string;
   }>;

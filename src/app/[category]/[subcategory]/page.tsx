@@ -6,10 +6,14 @@ import { ApiResponse, SubcategoryType } from "@/types/CommonTypes";
 export default async function Page({
   params,
 }: {
-  params: { category: string; subcategory: string };
+  params: Promise<{ category: string; subcategory: string }>;
 }) {
   const response: ApiResponse<SubcategoryType> = await getData(
-    `${API_ENDPOINTS.SUBCATEGORIES}?filters[slug][$eq]=${params.subcategory}&populate=articles`
+    `${API_ENDPOINTS.SUBCATEGORIES}?filters[slug][$eq]=${
+      (
+        await params
+      ).subcategory
+    }&populate=articles`
   );
 
   const [{ name, subtitle, articles }] = response.data;
@@ -20,8 +24,7 @@ export default async function Page({
     id: article.id,
     title: article.title,
     description: article.description,
-    content: article.content || "No content available", // Matches the expected `content` field
-    imageUrl: article.image?.url || "/placeholder.png", // Matches the expected `imageUrl` field
+    imageUrl: article?.thumbnailImage?.url, // Matches the expected `imageUrl` field
     slug: article.slug,
   }));
 
@@ -34,8 +37,8 @@ export default async function Page({
 
       <ArticleCard
         articles={transformedArticles}
-        categorySlug={params.category}
-        subcategorySlug={params.subcategory}
+        categorySlug={(await params).category}
+        subcategorySlug={(await params).subcategory}
       />
     </>
   );

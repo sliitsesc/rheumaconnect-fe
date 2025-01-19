@@ -6,7 +6,7 @@ import SubCategories from "../components/Subcategories/Subcategories";
 export default async function Page({
   params,
 }: {
-  params: { category: string };
+  params: Promise<{ category: string }>;
 }) {
   const categorySlug = (await params).category;
   const response: ApiResponse<Category> = await getData(

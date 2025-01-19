@@ -63,6 +63,7 @@ export interface Article {
   category: string;
   subcategory: string;
   thumbnailImage: ImageType;
+  publishedAt: string;
 }
 
 export interface Subcategory {
