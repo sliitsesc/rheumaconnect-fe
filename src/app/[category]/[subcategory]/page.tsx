@@ -16,7 +16,7 @@ export default async function Page({
 
   // Map and transform articles to match the expected props
 
-  const transformedArticles = articles.map((article: any) => ({
+  const transformedArticles = articles.map((article) => ({
     id: article.id,
     title: article.title,
     description: article.description,
