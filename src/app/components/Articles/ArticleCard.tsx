@@ -1,18 +1,24 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface ArticleCardProps {
-  name: string;
-  subtitle: string;
+  categorySlug: string;
+  subcategorySlug: string;
   articles: Array<{
     description: string;
     id: number;
     title: string;
     content: string;
     imageUrl: string;
+    slug: string;
   }>;
 }
 
-export default function ArticleCard({ name, subtitle, articles }: ArticleCardProps) {
+export default function ArticleCard({
+  articles,
+  categorySlug,
+  subcategorySlug,
+}: ArticleCardProps) {
   return (
     <section className="p-6">
       {/* <h1 className="text-3xl font-bold text-center text-black mb-4">{name}</h1>
@@ -23,8 +29,7 @@ export default function ArticleCard({ name, subtitle, articles }: ArticleCardPro
         {articles.map((article) => (
           <div
             key={article.id}
-            className="bg-gradient-to-r from-[#eaf5ff98] to-[#f4f9ff86] p-6 rounded-xl"
-          >
+            className="bg-gradient-to-r from-[#eaf5ff98] to-[#f4f9ff86] p-6 rounded-xl">
             <Image
               className="w-full h-[150px] object-cover object-center rounded-lg"
               src={article.imageUrl || "/placeholder.png"} // Fallback image if none provided
@@ -32,11 +37,17 @@ export default function ArticleCard({ name, subtitle, articles }: ArticleCardPro
               width={1000}
               height={1000}
             />
-            <h2 className="font-semibold text-2xl text-black mt-4">{article.title}</h2>
-            <p className="text-black m-1">{article.description.slice(0, 100)}...</p>
-            <button className="bg-transparent text-[#2F7CC4] border-2 border-[#2F7CC4] w-full h-10 rounded-[12px] text-[16px] font-medium hover:bg-[#276ca3] hover:text-white transition flex items-center justify-center">
-              Explore more
-            </button>
+            <h2 className="font-semibold text-2xl text-black mt-4">
+              {article.title}
+            </h2>
+            <p className="text-black m-1">
+              {article.description.slice(0, 100)}...
+            </p>
+            <Link href={`/${categorySlug}/${subcategorySlug}/${article.slug}`}>
+              <button className="bg-transparent text-[#2F7CC4] border-2 border-[#2F7CC4] w-full h-10 rounded-[12px] text-[16px] font-medium hover:bg-[#276ca3] hover:text-white transition flex items-center justify-center">
+                Explore more
+              </button>
+            </Link>
           </div>
         ))}
       </div>
