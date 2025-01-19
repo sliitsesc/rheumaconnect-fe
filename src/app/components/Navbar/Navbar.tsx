@@ -61,11 +61,11 @@ export default function Navbar({ data }: { data: NavbarDataType }) {
       <div className="container mx-auto px-4 flex items-center justify-between py-4">
         <Link
           href="/"
-          className="text-2xl font-bold text-blue-600 flex-shrink-0">
+          className="text-2xl font-bold text-[#2F7CC4] flex-shrink-0">
           Rheuma<span className="text-gray-800">Connect</span>
         </Link>
 
-        <nav className="hidden md:flex items-center space-x-6 ml-6">
+        <nav className="hidden md:flex items-center gap-x-6">
           {link.map(({ linkText, linkUrl }) => (
             <Link
               key={linkText}
@@ -85,8 +85,8 @@ export default function Navbar({ data }: { data: NavbarDataType }) {
             </button>
           </Link>
 
-          <div className="relative" ref={dropdownRef}>
-            {/* <button
+          {/* <div className="relative" ref={dropdownRef}>
+            <button
               onClick={toggleDropdown}
               className="bg-white border border-gray-400 text-gray-800 rounded-[10px] text-[14px] font-medium flex items-center justify-center hover:bg-gray-100 transition"
               style={{ width: "98px", height: "38px", lineHeight: "18px" }}>
@@ -106,9 +106,9 @@ export default function Navbar({ data }: { data: NavbarDataType }) {
                   d="M19 9l-7 7-7-7"
                 />
               </svg>
-            </button> */}
+            </button>
 
-            {/* {isDropdownOpen && (
+            {isDropdownOpen && (
               <div className="absolute mt-2 w-40 bg-white border border-gray-200 rounded shadow-lg">
                 {languages.map(({ label, value }) => (
                   <button
@@ -119,8 +119,8 @@ export default function Navbar({ data }: { data: NavbarDataType }) {
                   </button>
                 ))}
               </div>
-            )} */}
-          </div>
+            )}
+          </div> */}
         </nav>
 
         <button
