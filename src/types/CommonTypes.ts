@@ -7,6 +7,7 @@ export interface ImageType {
   caption: string;
   width: number;
   height: number;
+  url: string;
 }
 
 export interface NavbarType {
@@ -41,6 +42,7 @@ export interface Category {
   subtitle: string;
   slug: string;
   subcategories: Subcategory[];
+  image: ImageType;
 }
 
 export interface SubcategoryType {
