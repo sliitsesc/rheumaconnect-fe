@@ -17,6 +17,11 @@ jobs:
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       - name: Build the Docker image
+        env:
+          PROD_API_URL: ${{ secrets.PROD_API_URL }}
+          STAGE_API_URL: ${{ secrets.STAGE_API_URL }}
+          STAGE_API_BASE_URL: ${{ secrets.STAGE_API_BASE_URL }}
+          PROD_API_BASE_URL: ${{ secrets.PROD_API_BASE_URL }}
         run: |
           docker build -t pawanlive/rc-fe:latest .
 
@@ -27,10 +32,6 @@ jobs:
       - name: Deploy to Azure VM
         env:
           SSH_PRIVATE_KEY: ${{ secrets.AZURE_VM_SSH_KEY }}
-          PROD_API_URL: ${{ secrets.PROD_API_URL }}
-          STAGE_API_URL: ${{ secrets.STAGE_API_URL }}
-          STAGE_API_BASE_URL: ${{ secrets.STAGE_API_BASE_URL }}
-          PROD_API_BASE_URL: ${{ secrets.PROD_API_BASE_URL }}
         run: |
           echo "$SSH_PRIVATE_KEY" > ssh_key
           chmod 600 ssh_key
