@@ -1,6 +1,12 @@
 # Use Node.js 18 as the base image
 FROM node:20-alpine as builder
 
+# Declare build arguments
+ARG PROD_API_URL
+ARG STAGE_API_URL
+ARG STAGE_API_BASE_URL
+ARG PROD_API_BASE_URL
+
 # Set working directory
 WORKDIR /app
 
