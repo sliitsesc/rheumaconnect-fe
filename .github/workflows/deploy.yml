@@ -17,13 +17,13 @@ jobs:
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       - name: Build the Docker image
-        env:
-          PROD_API_URL: ${{ secrets.PROD_API_URL }}
-          STAGE_API_URL: ${{ secrets.STAGE_API_URL }}
-          STAGE_API_BASE_URL: ${{ secrets.STAGE_API_BASE_URL }}
-          PROD_API_BASE_URL: ${{ secrets.PROD_API_BASE_URL }}
         run: |
-          docker build -t pawanlive/rc-fe:latest .
+              docker build \
+                --build-arg PROD_API_URL=${{ secrets.PROD_API_URL }} \
+                --build-arg STAGE_API_URL=${{ secrets.STAGE_API_URL }} \
+                --build-arg STAGE_API_BASE_URL=${{ secrets.STAGE_API_BASE_URL }} \
+                --build-arg PROD_API_BASE_URL=${{ secrets.PROD_API_BASE_URL }} \
+                -t pawanlive/rc-fe:latest .
 
       - name: Push the Docker image to Docker Hub
         run: |
