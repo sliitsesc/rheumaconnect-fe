@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import CallIcon from "/public/call_icon.svg";
+import CallIcon from "/public/call_Icon.svg";
 
 function ContactCard() {
   return (
