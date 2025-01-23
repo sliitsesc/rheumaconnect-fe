@@ -1,7 +1,7 @@
 {
   "en": {
-    "title": "Expert backed, FREE medical advice for your Rheumatic Condition",
-    "description": "Everything about your pre-diagnosed rheumatic condition is just a button-click away with RheumaConnect.",
+    "title": "Fighting Arthritis Together for a Healthier, Pain-Free Life",
+    "description": "Your trusted guide to understanding arthritis and other rheumatological conditions. Empowering you with knowledge, support, and solutions for a better tomorrow.",
     "button": "Get Started",
     "az-cards": {
       "health": {
@@ -11,36 +11,6 @@
       "medicine": {
         "title": "Medicine A to Z",
         "description": "Find out how your medicine works, how and when to take it, and possible side effects"
-      }
-    }
-  },
-  "ta": {
-    "title": "உங்கள் மூட்டுவலி நிலைக்கு நிபுணர் ஆதரவு, இலவச மருத்துவ ஆலோசனை",
-    "description": "உங்கள் முன்கூட்டியே கண்டறியப்பட்ட மூட்டுவலி நிலை குறித்த அனைத்தும் RheumaConnect மூலம் ஒரு பட்டனை அழுத்துவதன் மூலம் அணுகக்கூடியது.",
-    "button": "தொடங்குங்கள்",
-    "az-cards": {
-      "health": {
-        "title": "சுகாதாரம் A முதல் Z வரை",
-        "description": "நோய்கள், அறிகுறிகள் மற்றும் சிகிச்சைகள் குறித்த தகவல்களை, செய்யவேண்டியவை மற்றும் உதவி எப்போது பெற வேண்டும் என்பதை அறியவும்"
-      },
-      "medicine": {
-        "title": "மருந்துகள் A முதல் Z வரை",
-        "description": "உங்கள் மருந்து எவ்வாறு செயல்படுகிறது, அதை எப்போது எடுக்க வேண்டும், மற்றும் சாத்தியமான பக்க விளைவுகள் குறித்ததைப் பாருங்கள்"
-      }
-    }
-  },
-  "si": {
-    "title": "ඔබේ සන්ධි රෝග තත්ත්වය සඳහා විශේෂඥ මඟ පෙන්වීමක් සහිත, නොමිලේ වෛද්‍ය උපදෙස්",
-    "description": "ඔබගේ පෙර අධ්‍යයනය කළ සන්ධි රෝග තත්ත්වය පිළිබඳ සියල්ල RheumaConnect මඟින් බොත්තමක් ක්ලික් කිරීමෙන් ලබාගත හැක.",
-    "button": "ආරම්භ කරන්න",
-    "az-cards": {
-      "health": {
-        "title": "සෞඛ්‍යය A සිට Z දක්වා",
-        "description": "රෝග තත්ත්ව, ලක්ෂණ සහ ප්‍රතිකාර පිළිබඳව, කුමක් කරන්නද සහ උදව් ගන්නා අවස්ථාවන් පිළිබඳව දැනගන්න"
-      },
-      "medicine": {
-        "title": "ඔෂධ A සිට Z දක්වා",
-        "description": "ඔබේ ඔෂධය කෙසේ කටයුතු කරන්නේද, එය කවදා ගැනීමටත්, සහ සම්බන්ධ පාර්ශ්ව පලවිපාක පිළිබඳව දැනගන්න"
       }
     }
   }

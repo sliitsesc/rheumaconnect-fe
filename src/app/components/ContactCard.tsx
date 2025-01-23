@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import CallIcon from "/public/call_icon.svg";
 
 function ContactCard() {
   return (
@@ -22,14 +24,15 @@ function ContactCard() {
           {/* "Call Kurunegala Hospital" button */}
           <a
             href="tel:0112112889"
-            className="py-[27px] px-[27px] gap-[33px] flex md:gap-0 md:items-center md:py-5 max-w-full md:max-w-[678px] pl-5 w-full bg-[#E7F2FC] rounded-2xl hover:bg-[#D6EAFB] transition"
-          >
-            <img
-              loading="lazy"
-              src="./call_icon.svg"
+            className="py-[27px] px-[27px] gap-[33px] flex md:gap-0 md:items-center md:py-5 max-w-full md:max-w-[678px] pl-5 w-full bg-[#E7F2FC] rounded-2xl hover:bg-[#D6EAFB] transition">
+            <Image
+              src={CallIcon}
               alt="Kurunegala Hospital Contact Icon"
+              width={42.15}
+              height={42.15}
               className="w-[42.15px] h-[42.15px] translate-y-[6px] md:w-16 md:h-16 md:object-contain md:mr-5 md:translate-y-[0]"
             />
+
             <div className="flex flex-col">
               <div className="w-[176px] h-[56px] text-[#484848] font-[DM Sans] text-xl font-medium leading-[20px] text-left md:w-auto md:h-auto md:text-[#484848] md:font-semibold md:text-xl md:leading-[20px]">
                 Call Kurunegala Hospital
@@ -43,12 +46,12 @@ function ContactCard() {
           {/* "Call Emergency Medical Hotline" button */}
           <a
             href="tel:1990"
-            className="py-[27px] px-[27px] gap-[33px] flex md:gap-0 md:items-center md:py-5 max-w-full md:max-w-[678px] pl-5 w-full bg-[#E7F2FC] rounded-2xl hover:bg-[#D6EAFB] transition"
-          >
-            <img
-              loading="lazy"
-              src="./call_icon.svg"
-              alt="Emergency Medical Hotline Icon"
+            className="py-[27px] px-[27px] gap-[33px] flex md:gap-0 md:items-center md:py-5 max-w-full md:max-w-[678px] pl-5 w-full bg-[#E7F2FC] rounded-2xl hover:bg-[#D6EAFB] transition">
+            <Image
+              src={CallIcon}
+              alt="Kurunegala Hospital Contact Icon"
+              width={42.15}
+              height={42.15}
               className="w-[42.15px] h-[42.15px] translate-y-[6px] md:w-16 md:h-16 md:object-contain md:mr-5 md:translate-y-[0]"
             />
             <div className="flex flex-col">

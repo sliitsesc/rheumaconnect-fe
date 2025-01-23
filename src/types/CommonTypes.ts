@@ -64,6 +64,7 @@ export interface Article {
   subcategorySlug: string;
   thumbnailImage: ImageType;
   publishedAt?: Date;
+  pdf: PDFType;
 }
 
 export interface Subcategory {
@@ -72,3 +73,18 @@ export interface Subcategory {
   slug: string;
 }
 //#endregion
+
+export interface PDFType {
+  id: number;
+  documentId: string;
+  name: string;
+  alternativeText: string | null;
+  hash: string;
+  ext: string;
+  mime: string;
+  size: number;
+  url: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+}

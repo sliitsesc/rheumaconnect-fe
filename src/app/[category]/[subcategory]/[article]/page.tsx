@@ -1,8 +1,11 @@
+import { API_BASE_URL } from "@/config";
 import { API_ENDPOINTS } from "@/config/endpoints";
 import { getData } from "@/lib/helpers/dataFetchHelper";
 import { ApiResponse, Article } from "@/types/CommonTypes";
 import Image from "next/image";
 import Link from "next/link";
+import BrokenImagePlaceholder from "/public/common/broken-image-placeholder.png";
+import DownloadPDF from "@/app/components/DownloadPDF/DownloadPDF";
 
 export default async function Page({
   params,
@@ -12,12 +15,11 @@ export default async function Page({
   const { article, category, subcategory } = await params;
 
   const response: ApiResponse<Article> = await getData(
-    `${API_ENDPOINTS.ARTICLES}?filters[slug][$eq]=${article}`
+    `${API_ENDPOINTS.ARTICLES}?filters[slug][$eq]=${article}&populate=pdf&populate=thumbnailImage`
   );
 
-  console.log(response);
-
-  const [{ title, publishedAt, description }] = response.data;
+  const [{ title, publishedAt, description, thumbnailImage, pdf }] =
+    response.data;
 
   const publishedDate = publishedAt
     ? new Date(publishedAt).toLocaleDateString("en-US", {
@@ -42,8 +44,7 @@ export default async function Page({
             <li>
               <Link
                 href={`/${category}/${subcategory}`}
-                className="hover:text-blue-600"
-              >
+                className="hover:text-blue-600">
                 {subcategory}
               </Link>
             </li>
@@ -88,7 +89,11 @@ export default async function Page({
 
         <div className="w-full">
           <Image
-            src="/nurse.avif"
+            src={
+              thumbnailImage?.url
+                ? `${API_BASE_URL}${thumbnailImage?.url}`
+                : BrokenImagePlaceholder
+            }
             alt="Doctor providing medical advice"
             width={550}
             height={550}
@@ -103,24 +108,10 @@ export default async function Page({
           <h1 className="text-3xl font-bold text-[#484848] mb-8 text-center md:text-center">
             To view the full article, please download.
           </h1>
-          <button
-            className=" flex gap-2 text-white text-lg px-8 py-3 rounded-md shadow hover:brightness-110 transition"
-            style={{ backgroundColor: "#2F7CC4" }}
-          >
-            Download PDF
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="size-6"
-            >
-              <path
-                fillRule="evenodd"
-                d="M12 2.25a.75.75 0 0 1 .75.75v11.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.22 3.22V3a.75.75 0 0 1 .75-.75Zm-9 13.5a.75.75 0 0 1 .75.75v2.25a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V16.5a.75.75 0 0 1 1.5 0v2.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V16.5a.75.75 0 0 1 .75-.75Z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </button>
+          <DownloadPDF
+            pdfName={pdf?.name}
+            pdfUrl={`${API_BASE_URL}${pdf?.url}`}
+          />
         </section>
       </div>
     </section>

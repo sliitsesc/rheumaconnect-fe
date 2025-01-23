@@ -5,6 +5,7 @@ import { API_ENDPOINTS } from "@/config/endpoints";
 import { API_BASE_URL } from "@/config";
 import Link from "next/link";
 import { truncateText } from "@/lib/utils/truncateText";
+import BrokenImagePlaceholder from "/public/common/broken-image-placeholder.png";
 
 export default async function MainCategorySection() {
   const response: ApiResponse<Category> = await getData(
@@ -29,7 +30,11 @@ export default async function MainCategorySection() {
               className="p-8 cursor-pointer border-2 border-transparent hover:border-[#DBEBFB] rounded-xl transition duration-500">
               <div className="relative max-w-[274px] max-h-[103px] mx-auto aspect-[274/103] mb-4">
                 <Image
-                  src={`${API_BASE_URL}${category.image?.url}`}
+                  src={
+                    category?.image?.url
+                      ? `${API_BASE_URL}${category.image?.url}`
+                      : BrokenImagePlaceholder
+                  }
                   alt={category?.image?.alternativeText}
                   fill
                   className="rounded-xl object-cover"
