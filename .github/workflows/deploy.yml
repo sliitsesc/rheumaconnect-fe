@@ -41,6 +41,7 @@ jobs:
           sudo docker rm rc-fe-stage || true
           sudo docker run -d --name rc-fe-stage \
             -p 3000:3000 \
+            --env-file /home/rheumac/envs/rc-fe/.env \
             pawanlive/rc-fe:latest
           exit
           EOF
