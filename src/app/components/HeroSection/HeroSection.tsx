@@ -9,12 +9,16 @@ type HeroSectionProps = {
 
 const HeroSection = ({ selectedLang }: HeroSectionProps) => {
   return (
-    <section className="bg-gradient-to-b from-blue-100 to-white py-16">
+    <section
+      id="home"
+      className="bg-gradient-to-b from-blue-100 to-white py-16"
+    >
       <div className="container mx-auto px-4 lg:px-16 flex flex-col-reverse lg:flex-row items-center gap-8">
         <div className="text-center lg:text-left flex-1 lg:pr-8">
           <h1
             className="text-3xl lg:text-5xl font-bold mb-6 leading-snug"
-            style={{ color: "#484848" }}>
+            style={{ color: "#484848" }}
+          >
             {translations[selectedLang].title}
           </h1>
           <p className="text-lg mb-6" style={{ color: "#555555" }}>
