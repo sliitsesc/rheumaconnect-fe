@@ -10,12 +10,12 @@ const translationsData: Translations = translations;
 
 export default async function Home() {
   return (
-    <div>
+    <>
       <HeroSection selectedLang="en" />
       {/* <ContactCard /> */}
       <MainCategorySection />
       <ContactCard />
       <AZCards azCards={translationsData["en"]["az-cards"]} />
-    </div>
+    </>
   );
 }
