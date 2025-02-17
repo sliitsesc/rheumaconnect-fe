@@ -18,9 +18,9 @@ function InfoSection() {
             Developed in collaboration with healthcare professionals, our
             platform provides reliable medical information, self-care tips, and
             the latest treatment options to help patients better manage their
-            condition. Whether you're newly diagnosed or looking for ways to
-            improve your quality of life, Arthritis.lk is here to guide you with
-            expert insights and practical advice.
+            condition. Whether you&apos;re newly diagnosed or looking for ways
+            to improve your quality of life, Arthritis.lk is here to guide you
+            with expert insights and practical advice.
           </p>
           <Link
             href="/about"

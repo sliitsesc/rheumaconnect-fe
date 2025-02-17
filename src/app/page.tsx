@@ -1,11 +1,11 @@
-import AZCards from "@/app/components/AZCards";
-import translations from "@/data/translations.json";
-import { Translations } from "@/app/types";
+// import AZCards from "@/app/components/AZCards";
+// import translations from "@/data/translations.json";
+// import { Translations } from "@/app/types";
 import ContactCard from "./components/ContactCard";
 import MainCategorySection from "./components/MainCategorySection";
 import HeroSection from "./components/HeroSection/HeroSection";
 import InfoSection from "./components/InfoSection/InfoSection";
-const translationsData: Translations = translations;
+// const translationsData: Translations = translations;
 
 // fetch data from API
 
