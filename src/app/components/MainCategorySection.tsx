@@ -29,7 +29,8 @@ export default async function MainCategorySection() {
           <Link key={category.id} href={`/${category.slug}`}>
             <div
               key={category.id}
-              className="p-8 cursor-pointer border-2 border-transparent hover:border-[#DBEBFB] rounded-xl transition duration-500">
+              className="p-8 cursor-pointer border-2 border-transparent hover:border-[#DBEBFB] rounded-xl transition duration-300 shadow-md"
+            >
               <div className="relative max-w-[274px] max-h-[103px] mx-auto aspect-[274/103] mb-4">
                 <Image
                   src={
