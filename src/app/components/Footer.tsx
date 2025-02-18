@@ -22,13 +22,14 @@ const Footer = () => {
       <div className="container md:hidden flex flex-col mx-auto px-5">
         {/* RheumaConnect Brand Name */}
         <h3 className="font-bold text-2xl text-black mb-5 text-center">
-          RheumaConnect
+          Arthritis.lk
         </h3>
 
         {/* Link 1 Dropdown */}
         <button
           onClick={() => toggleDropdown("link1")}
-          className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center">
+          className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center"
+        >
           Link 1
           {isOpen.link1 ? (
             <ChevronUpIcon className="h-6 w-6 text-gray-500" />
@@ -59,7 +60,8 @@ const Footer = () => {
         {/* Link 2 Dropdown */}
         <button
           onClick={() => toggleDropdown("link2")}
-          className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center">
+          className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center"
+        >
           Link 2
           {isOpen.link2 ? (
             <ChevronUpIcon className="h-6 w-6 text-gray-500" />
@@ -90,7 +92,8 @@ const Footer = () => {
         {/* Contact Dropdown */}
         <button
           onClick={() => toggleDropdown("contact")}
-          className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center">
+          className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center"
+        >
           Contact
           {isOpen.contact ? (
             <ChevronUpIcon className="h-6 w-6 text-gray-500" />
@@ -111,7 +114,7 @@ const Footer = () => {
       {/* Desktop View */}
       <div className="hidden container md:flex flex-row mx-auto px-10">
         <div className="flex flex-col w-6/12">
-          <h3 className="font-bold text-2xl mb-5">RheumaConnect</h3>
+          <h3 className="font-bold text-2xl mb-5"> Arthritis.lk</h3>
           <p>
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.
