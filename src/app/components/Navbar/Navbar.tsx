@@ -191,9 +191,8 @@ export default function Navbar({ data }: { data: NavbarType }) {
               ))}
               <button
                 className="px-6 py-2 bg-[#2F7CC4] text-white rounded-full text-sm hover:bg-[#276ca3] transition"
-                style={{ width: "98px", height: "38px" }}
-              >
-                Explore
+                style={{ width: "98px", height: "38px" }}>
+                {navbarButton?.buttonText}
               </button>
               <div className="mt-4">
                 <div className="relative" ref={dropdownRef}>

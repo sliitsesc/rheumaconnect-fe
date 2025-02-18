@@ -11,13 +11,13 @@ import InfoSection from "./components/InfoSection/InfoSection";
 
 export default async function Home() {
   return (
-    <div>
+    <>
       <HeroSection selectedLang="en" />
       {/* <ContactCard /> */}
       <InfoSection />
       <MainCategorySection />
       <ContactCard />
       {/* <AZCards azCards={translationsData["en"]["az-cards"]} /> */}
-    </div>
+    </>
   );
 }
