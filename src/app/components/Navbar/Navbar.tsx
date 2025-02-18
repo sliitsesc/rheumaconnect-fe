@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { NavbarType } from "@/types/CommonTypes";
-import arthritisLogo from "/public/arthritis_logo.png"; // Adjust the path as needed
+// import arthritisLogo from "/public/arthritis_logo.png"; // Adjust the path as needed
 
 export default function Navbar({ data }: { data: NavbarType }) {
   const { link, navbarButton } = data;
@@ -37,8 +37,7 @@ export default function Navbar({ data }: { data: NavbarType }) {
               href={linkUrl || "#"}
               className={`hover:text-blue-600 text-gray-800 font-medium ${
                 pathname === linkUrl ? "text-blue-600" : ""
-              }`}
-            >
+              }`}>
               {linkText}
             </Link>
           ))}
@@ -46,8 +45,7 @@ export default function Navbar({ data }: { data: NavbarType }) {
           <Link href={navbarButton?.buttonLink || "#"}>
             <button
               className="bg-[#2F7CC4] text-white rounded-[10px] text-[14px] font-medium hover:bg-[#276ca3] transition flex items-center justify-center"
-              style={{ width: "98px", height: "38px", lineHeight: "18px" }}
-            >
+              style={{ width: "98px", height: "38px", lineHeight: "18px" }}>
               {navbarButton?.buttonText}
             </button>
           </Link>
@@ -56,8 +54,7 @@ export default function Navbar({ data }: { data: NavbarType }) {
         <button
           onClick={toggleMenu}
           className="md:hidden text-gray-800 focus:outline-none"
-          aria-label="Toggle Menu"
-        >
+          aria-label="Toggle Menu">
           {isOpen ? (
             <svg
               className="w-6 h-6"
@@ -65,8 +62,7 @@ export default function Navbar({ data }: { data: NavbarType }) {
               stroke="currentColor"
               strokeWidth="2"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -80,8 +76,7 @@ export default function Navbar({ data }: { data: NavbarType }) {
               stroke="currentColor"
               strokeWidth="2"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -95,12 +90,10 @@ export default function Navbar({ data }: { data: NavbarType }) {
       {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-          onClick={closeMenu}
-        >
+          onClick={closeMenu}>
           <div
             className="absolute top-0 left-0 w-64 bg-white shadow-lg h-full rounded-r-md"
-            onClick={(e) => e.stopPropagation()}
-          >
+            onClick={(e) => e.stopPropagation()}>
             <div className="p-6 space-y-4">
               {link.map(({ linkText, linkUrl }) => (
                 <Link
@@ -111,8 +104,7 @@ export default function Navbar({ data }: { data: NavbarType }) {
                     pathname === linkUrl
                       ? "bg-gray-200 font-bold text-blue-600"
                       : ""
-                  }`}
-                >
+                  }`}>
                   {linkText}
                 </Link>
               ))}
