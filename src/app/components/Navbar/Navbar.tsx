@@ -8,7 +8,7 @@ import { NavbarType } from "@/types/CommonTypes";
 // import arthritisLogo from "/public/arthritis_logo.png"; // Adjust the path as needed
 
 export default function Navbar({ data }: { data: NavbarType }) {
-  const { link, navbarButton } = data;
+  const { link = [], navbarButton = null } = data || {};
 
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
@@ -42,13 +42,15 @@ export default function Navbar({ data }: { data: NavbarType }) {
             </Link>
           ))}
 
-          <Link href={navbarButton?.buttonLink || "#"}>
-            <button
-              className="bg-[#2F7CC4] text-white rounded-[10px] text-[14px] font-medium hover:bg-[#276ca3] transition flex items-center justify-center"
-              style={{ width: "98px", height: "38px", lineHeight: "18px" }}>
-              {navbarButton?.buttonText}
-            </button>
-          </Link>
+          {navbarButton && (
+            <Link href={navbarButton.buttonLink || "#"}>
+              <button
+                className="bg-[#2F7CC4] text-white rounded-[10px] text-[14px] font-medium hover:bg-[#276ca3] transition flex items-center justify-center"
+                style={{ width: "98px", height: "38px", lineHeight: "18px" }}>
+                {navbarButton.buttonText}
+              </button>
+            </Link>
+          )}
         </nav>
 
         <button
@@ -108,11 +110,13 @@ export default function Navbar({ data }: { data: NavbarType }) {
                   {linkText}
                 </Link>
               ))}
-              <button
-                className="px-6 py-2 bg-[#2F7CC4] text-white rounded-full text-sm hover:bg-[#276ca3] transition"
-                style={{ width: "98px", height: "38px" }}>
-                {navbarButton?.buttonText}
-              </button>
+              {navbarButton && (
+                <button
+                  className="px-6 py-2 bg-[#2F7CC4] text-white rounded-full text-sm hover:bg-[#276ca3] transition"
+                  style={{ width: "98px", height: "38px" }}>
+                  {navbarButton.buttonText}
+                </button>
+              )}
               <div className="mt-4">
                 <div className="relative" ref={dropdownRef}>
                   {/* Language dropdown code here */}
