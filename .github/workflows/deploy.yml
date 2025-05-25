@@ -18,20 +18,31 @@ jobs:
 
       - name: Build the Docker image
         run: |
-          docker build -t pawanlive/rc-fe:latest .
+              docker build \
+                --build-arg PROD_API_URL=${{ secrets.PROD_API_URL }} \
+                --build-arg STAGE_API_URL=${{ secrets.STAGE_API_URL }} \
+                --build-arg STAGE_API_BASE_URL=${{ secrets.STAGE_API_BASE_URL }} \
+                --build-arg PROD_API_BASE_URL=${{ secrets.PROD_API_BASE_URL }} \
+                -t pawanlive/rc-fe:latest .
 
       - name: Push the Docker image to Docker Hub
         run: |
           docker push pawanlive/rc-fe:latest
 
       - name: Deploy to Azure VM
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.AZURE_VM_SSH_KEY }}
         run: |
-          ssh -o StrictHostKeyChecking=no your-username@${{ secrets.AZURE_VM_IP }} << 'EOF'
+          echo "$SSH_PRIVATE_KEY" > ssh_key
+          chmod 600 ssh_key
+          ssh -i ssh_key -o StrictHostKeyChecking=no rheumac@${{ secrets.AZURE_VM_IP }} << 'EOF'
           sudo docker pull pawanlive/rc-fe:latest
           sudo docker stop rc-fe-stage || true
           sudo docker rm rc-fe-stage || true
           sudo docker run -d --name rc-fe-stage \
             -p 3000:3000 \
+            --env-file /home/rheumac/envs/rc-fe/.env \
             pawanlive/rc-fe:latest
           exit
           EOF
+          rm ssh_key

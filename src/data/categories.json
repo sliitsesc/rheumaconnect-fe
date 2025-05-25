@@ -1,0 +1,19 @@
+{
+  "category": [
+    {
+      "title": "Rheumatic Diseases",
+      "description": "Rheumatic DiseasesRheumatic DiseasesRheumatic DiseasesRheumatic DiseasesRheumatic Diseases",
+      "slug": "rd"
+    },
+    {
+      "title": "Medication",
+      "description": "Rheumatic Medication",
+      "slug": "med"
+    },
+    {
+      "title": "Treatment Options",
+      "description": "Rheumatic Treatment Options",
+      "slug": "top"
+    }
+  ]
+}

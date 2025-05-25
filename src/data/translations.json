@@ -1,0 +1,17 @@
+{
+  "en": {
+    "title": "Fighting Arthritis Together for a Healthier, Pain-Free Life",
+    "description": "Your trusted guide to understanding arthritis and other rheumatological conditions. Empowering you with knowledge, support, and solutions for a better tomorrow.",
+    "button": "Get Started",
+    "az-cards": {
+      "health": {
+        "title": "Health A to Z",
+        "description": "Find out about conditions, symptoms and treatments, including what to do and when to get help"
+      },
+      "medicine": {
+        "title": "Medicine A to Z",
+        "description": "Find out how your medicine works, how and when to take it, and possible side effects"
+      }
+    }
+  }
+}
