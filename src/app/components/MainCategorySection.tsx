@@ -12,7 +12,7 @@ export default async function MainCategorySection() {
     `${API_ENDPOINTS.CATEGORIES}?populate=image`
   );
 
-  const categories = response.data;
+  const categories = response?.data || [];
 
   return (
     <section
