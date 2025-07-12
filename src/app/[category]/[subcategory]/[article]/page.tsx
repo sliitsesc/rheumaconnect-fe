@@ -59,7 +59,7 @@ export default async function Page({
         </h1>
         <div className="flex flex-wrap justify-between items-center w-full mb-4">
           <p className="text-lg text-gray-600 max-w-2xl text-left">
-            {publishedDate} | by Dr. Nishantha Perera
+            {publishedDate} | by Dr. Asanka Nugaliyadde
           </p>
 
           {/* <div className="flex items-center gap-4">

@@ -100,7 +100,6 @@ const Footer = () => {
             <p>176 Ambepussa - Trincomalee Hwy </p>
             <p>Kurunegala</p>
             <p>0372 233 907</p>
-            
           </div>
         )}
       </div>
@@ -110,13 +109,12 @@ const Footer = () => {
         <div className="flex flex-col w-5/12">
           <h3 className="font-bold text-2xl mb-5"> Arthritis.lk</h3>
           <p>
-            Arthritis.lk is a free and open-to-all platform where patients can
-            easily access reliable information about specific rheumatic
-            conditions.
+            Platform where patients can easily access reliable information about
+            specific rheumatic conditions.
             <br />
-            The platform features educational content, medication guides, FAQs,
+            {/* The platform features educational content, medication guides, FAQs,
             and more, aiming to raise awareness and support patients in managing
-            rheumatic diseases.
+            rheumatic diseases. */}
           </p>
         </div>
 
