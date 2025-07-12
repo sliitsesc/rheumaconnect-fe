@@ -4,7 +4,7 @@ import CallIcon from "/public/call_Icon.svg";
 
 function ContactCard() {
   return (
-    <section className="relative mx-auto py-1 px-[32px] lg:px-0 lg:py-4 gap-[10px] md:gap-0 bg-white">
+    <section className="relative mx-auto py-1 px-[32px] lg:px-0 lg:py-4 gap-[10px] md:gap-0 bg-white" id="contact">
       <div className="container md:pl-[67px] md:pr-[67px] mx-auto flex flex-col md:flex-row items-center gap-[67px] justify-between md:mt-[130px] md:mb-[130px] ">
         {/* Text container */}
         <div className="text flex flex-col gap-6 w-full md:w-3/5 min-h-[240px] order-1 md:order-2">
@@ -38,7 +38,7 @@ function ContactCard() {
                 Call Kurunegala Hospital
               </div>
               <div className="mt-1.5 text-[#9E9E9E] font-normal text-xl leading-[20px] hidden md:block">
-                0112 112 889
+                0372 233 907
               </div>
             </div>
           </a>

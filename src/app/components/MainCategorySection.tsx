@@ -16,12 +16,14 @@ export default async function MainCategorySection() {
   return (
     <section
       className="container bg-white py-12 mx-auto scroll-m-[100px]"
-      id="categories">
+      id="categories"
+    >
       <h2 className="text-[#484848] font-bold text-4xl text-center">
-        Main Categories
+        Resource Categories
       </h2>
       <p className="text-[#9E9E9E] text-center px-8 py-8 text-2xl">
-        Some of the most common types Rheumatic diseases
+        A central resource to explore causes, types and treatments for rheumatic
+        conditions.
       </p>
       <div className="flex flex-wrap justify-center gap-4 px-8">
         {categories.map((category) => (

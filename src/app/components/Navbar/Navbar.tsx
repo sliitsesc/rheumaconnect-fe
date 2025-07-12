@@ -22,7 +22,7 @@ export default function Navbar({ data }: { data: NavbarType }) {
       <div className="container mx-auto px-4 flex items-center justify-between py-4">
         <Link href="/" className="flex-shrink-0">
           <Image
-            src="/arthritis_logo.png"
+            src="/logo3.svg"
             alt="Arthritis Logo"
             width={175} // Adjust the width as neede
             height={70}

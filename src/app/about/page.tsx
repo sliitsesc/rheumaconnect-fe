@@ -30,26 +30,24 @@ export default function Page() {
             <div>
               <p className="text-lg text-gray-600">
                 Arthritis.lk is a free and open-to-all platform where patients
-                can find information about specific Rheumatic conditions. Led by
-                Dr. Asanka Nugaliyadde, Consultant Rheumatologist at the
-                Teaching Hospital, Kurunegala.
+                can easily access reliable information about specific rheumatic
+                conditions. The website is led by Dr. Asanka Nugaliyadde,
+                Consultant Rheumatologist at the Teaching Hospital, Kurunegala.
               </p>
               <p className="text-lg text-gray-600 mt-2">
-                Suspendisse nisi nullam pellentesque odio magna. Montes nascetur
-                risus pharetra aliquet, tempus ante efficitur. Magnis pharetra
-                taciti dolor; sapien cursus porttitor. Dictumst felis non
-                aliquet; inceptos venenatis taciti magna. Dui metus massa morbi
-                malesuada interdum ad eget vel. Pulvinar habitant arcu mollis
-                erat senectus. Non tempor varius dui ante sed nibh vel
-                scelerisque. Conubia ac tortor est dapibus platea aptent. Aenean
-                mus consequat eros condimentum in mollis urna venenatis maximus.
+                Arthritis.lk is developed by the Software Engineering Student
+                Community (SESC) of SLIIT as a part of a technical CSR
+                initiative. The platform features educational content,
+                medication guides, FAQs, and more, aiming to raise awareness and
+                support patients in managing rheumatic diseases.
               </p>
-              <Link
+              {/* <Link
                 href="/contact"
-                className="inline-flex items-center mt-4 hover:text-blue-600 transition-all duration-300 font-semibold">
+                className="inline-flex items-center mt-4 hover:text-blue-600 transition-all duration-300 font-semibold"
+              >
                 Learn more about the doctor
                 <ArrowTopRightOnSquareIcon width={24} className="ml-2" />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </section>
@@ -67,18 +65,12 @@ export default function Page() {
             </div>
             <div>
               <p className="text-lg text-gray-600">
-                Arthritis.lk is a free and open-to-all platform where patients
-                can find information about specific Rheumatic conditions. Led by
-                Dr. Asanka Nugaliyadde, Consultant Rheumatologist at the
+                Dr. Asanka Nugaliyadde is a Consultant Rheumatologist at the
                 Teaching Hospital, Kurunegala.
               </p>
-              <p className="text-lg text-gray-600 mt-2">
-                Suspendisse nisi nullam pellentesque odio magna. Montes nascetur
-                risus pharetra aliquet, tempus ante efficitur. Magnis pharetra
-                taciti dolor; sapien cursus porttitor. Dictumst felis non
-                aliquet; inceptos venenatis taciti magna. Dui metus massa morbi
-                malesuada interdum ad eget vel.
-              </p>
+              {/* <p className="text-lg text-gray-600 mt-2">
+                Sdd
+              </p> */}
               <p className="mt-4 font-semibold italic">
                 Dr Asanka Nugaliyadde
                 <br />
@@ -89,19 +81,22 @@ export default function Page() {
               <div className="flex items-center mt-4 space-x-4">
                 <Link
                   href="https://www.linkedin.com/in/asanka-nugaliyadde-20006188"
-                  className="inline-flex items-center hover:text-blue-600 transition-all duration-300 font-semibold">
+                  className="inline-flex items-center hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
                   Linkedin
                   <ArrowTopRightOnSquareIcon width={24} className="ml-2" />
                 </Link>
                 <Link
                   href="https://www.researchgate.net/profile/Asanka-Nugaliyadde-2"
-                  className="inline-flex items-center hover:text-blue-600 transition-all duration-300 font-semibold">
+                  className="inline-flex items-center hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
                   Research Gate
                   <ArrowTopRightOnSquareIcon width={24} className="ml-2" />
                 </Link>
                 <Link
                   href="https://www.researchgate.net/profile/Asanka-Nugaliyadde-2"
-                  className="inline-flex items-center hover:text-blue-600 transition-all duration-300 font-semibold">
+                  className="inline-flex items-center hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
                   Email
                   <ArrowTopRightOnSquareIcon width={24} className="ml-2" />
                 </Link>
@@ -125,24 +120,30 @@ export default function Page() {
             </div>
             <div>
               <p className="text-lg text-gray-600">
-                Suspendisse nisi nullam pellentesque odio magna. Montes nascetur
-                risus pharetra aliquet, tempus ante efficitur. Magnis pharetra
-                taciti dolor; sapien cursus porttitor. Dictumst felis non
-                aliquet; inceptos venenatis taciti magna. Dui metus massa morbi
-                malesuada interdum ad eget vel.
+                Teaching Hospital Kurunegala (THK) operates under Sri Lanka’s
+                Ministry of Health and is directly overseen by the Line
+                Ministry. It stands as the main tertiary care hospital in the
+                North Western Province and is part of a select group of
+                hospitals managed at the national level.
               </p>
               <p className="text-lg text-gray-600 mt-2">
-                Suspendisse nisi nullam pellentesque odio magna. Montes nascetur
-                risus pharetra aliquet, tempus ante efficitur. Magnis pharetra
-                taciti dolor; sapien cursus porttitor. Dictumst felis non
-                aliquet; inceptos venenatis taciti magna. Dui metus massa morbi
-                malesuada interdum ad eget vel.
+                THK offers a comprehensive range of specialized medical
+                services, including internal medicine, surgery, pediatrics,
+                gynecology and obstetrics, orthopedics, cardiology, ENT,
+                ophthalmology, urology, oncology, dermatology, neurology,
+                rheumatology, chest medicine, neonatology, and judicial
+                medicine.
+                {/* Uniquely, it also houses a dedicated Thalassemia Unit.
+                With a large number of inpatient wards and bed capacity, THK is
+                one of the largest and most well-equipped teaching hospitals in
+                the country. */}
               </p>
               <div className="flex items-center mt-4 space-x-4">
                 <Link
-                  href="https://linkedin.com/in/asanka-nugaliyadde"
-                  className="inline-flex items-center hover:text-blue-600 transition-all duration-300 font-semibold">
-                  Contact Hospital
+                  href="https://www.kurunegalahospital.health.gov.lk/"
+                  className="inline-flex items-center hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  More Details
                   <ArrowTopRightOnSquareIcon width={24} className="ml-2" />
                 </Link>
               </div>

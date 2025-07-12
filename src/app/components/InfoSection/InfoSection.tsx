@@ -13,14 +13,8 @@ function InfoSection() {
         {/* Text container */}
         <div className="text flex flex-col gap-4 w-full md:w-3/5 min-h-[240px] order-1 md:order-2">
           <p className="text-center font-[DM Sans] font-normal text-[24px] leading-[32dpx] text-[#484848] md:text-left md:text-[24px] md:leading-[32px] md:text-[#9E9E9E]">
-            Arthritis.lk is dedicated to educating and supporting individuals
-            living with rheumatoid arthritis and other rheumatic conditions.
-            Developed in collaboration with healthcare professionals, our
-            platform provides reliable medical information, self-care tips, and
-            the latest treatment options to help patients better manage their
-            condition. Whether you&apos;re newly diagnosed or looking for ways
-            to improve your quality of life, Arthritis.lk is here to guide you
-            with expert insights and practical advice.
+            Arthritis.lk is a free and open-to-all platform where patients can easily access reliable information about specific rheumatic conditions. The website is led by Dr. Asanka Nugaliyadde, Consultant Rheumatologist at the Teaching Hospital, Kurunegala. 
+Arthritis.lk is developed by the Software Engineering Student Community (SESC) of SLIIT as a part of a technical CSR initiative. The platform features educational content, medication guides, FAQs, and more, aiming to raise awareness and support patients in managing rheumatic diseases.
           </p>
           <Link
             href="/about"
