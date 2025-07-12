@@ -1,4 +1,5 @@
 // import type { Metadata } from "next";
+import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import "@fontsource/dm-sans";
@@ -14,10 +15,15 @@ const dmSans = DM_Sans({
   variable: "--font-dm-sans",
 });
 
-// export const metadata: Metadata = {
-//   title: "RheumaConnect",
-//   description: "",
-// };
+export const metadata: Metadata = {
+  title: "Arthritis.lk",
+  description:
+    "Platform where patients can easily access reliable information about rheumatic conditions.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
+};
 
 export default async function RootLayout({
   children,

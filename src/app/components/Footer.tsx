@@ -40,19 +40,16 @@ const Footer = () => {
         {isOpen.link1 && (
           <ul className="bg-white p-3 rounded-lg mb-4">
             <li>
-              <a href="#">Tincidunt amet</a>
+              <a href="#">Home</a>
             </li>
             <li>
-              <a href="#">Himenaeos</a>
+              <a href="#">About</a>
             </li>
             <li>
-              <a href="#">Mollis consequat</a>
+              <a href="#">Categories</a>
             </li>
             <li>
-              <a href="#">Facilisi diam</a>
-            </li>
-            <li>
-              <a href="#">Inceptos blandit</a>
+              <a href="#">Contact</a>
             </li>
           </ul>
         )}
@@ -72,19 +69,16 @@ const Footer = () => {
         {isOpen.link2 && (
           <ul className="bg-white p-3 rounded-lg">
             <li>
-              <a href="#">Tincidunt amet</a>
+              <a href="#">Home</a>
             </li>
             <li>
-              <a href="#">Himenaeos</a>
+              <a href="#">About</a>
             </li>
             <li>
-              <a href="#">Mollis consequat</a>
+              <a href="#">Categories</a>
             </li>
             <li>
-              <a href="#">Facilisi diam</a>
-            </li>
-            <li>
-              <a href="#">Inceptos blandit</a>
+              <a href="#">Contact</a>
             </li>
           </ul>
         )}
@@ -103,17 +97,17 @@ const Footer = () => {
         </button>
         {isOpen.contact && (
           <div className="bg-white p-3 rounded-lg">
-            <p>453 Prosacco Summit</p>
-            <p>Port Goldenland, ID 80140</p>
-            <p>+91 662 782 7698</p>
-            <p>+91 662 782 7698</p>
+            <p>176 Ambepussa - Trincomalee Hwy </p>
+            <p>Kurunegala</p>
+            <p>0372 233 907</p>
+            
           </div>
         )}
       </div>
 
       {/* Desktop View */}
       <div className="hidden container md:flex flex-row mx-auto px-10">
-        <div className="flex flex-col w-6/12">
+        <div className="flex flex-col w-5/12">
           <h3 className="font-bold text-2xl mb-5"> Arthritis.lk</h3>
           <p>
             Arthritis.lk is a free and open-to-all platform where patients can
@@ -126,7 +120,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="flex flex-col w-2/12">
+        <div className="flex flex-col w-2/12 ml-12">
           <h3 className="font-bold text-2xl mb-5">Links</h3>
           <ul>
             <li>
@@ -146,14 +140,12 @@ const Footer = () => {
 
         <div className="flex flex-col w-2/12"></div>
 
-        <div className="flex flex-col w-2/12">
+        <div className="flex flex-col w-3/12">
           <h3 className="font-bold text-2xl mb-5">Connect</h3>
           <span>176 Ambepussa - Trincomalee Hwy, Kurunegala</span>
 
-          <span>0372 233 907</span>
-          
+          <span className="mt-2">0372 233 907</span>
         </div>
-      
       </div>
     </section>
   );
