@@ -16,7 +16,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Arthritis.lk",
+  title: "Arthritis | Rheumatic conditions resource platform in Sri Lanka",
   description:
     "Platform where patients can easily access reliable information about rheumatic conditions.",
   icons: {
