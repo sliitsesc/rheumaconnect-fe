@@ -19,7 +19,7 @@ export default async function MainCategorySection() {
       id="resources"
     >
       <h2 className="text-[#484848] font-bold text-4xl text-center">
-        Rheumatic Health & Wellness
+        Resource Categories
       </h2>
       <p className="text-[#9E9E9E] text-center px-8 py-8 text-2xl">
         A central resource to explore causes, types and treatments for rheumatic
