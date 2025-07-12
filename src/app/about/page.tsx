@@ -132,7 +132,7 @@ export default function Page() {
                 gynecology and obstetrics, orthopedics, cardiology, ENT,
                 ophthalmology, urology, oncology, dermatology, neurology,
                 rheumatology, chest medicine, neonatology, and judicial
-                medicine. 
+                medicine.
                 {/* Uniquely, it also houses a dedicated Thalassemia Unit.
                 With a large number of inpatient wards and bed capacity, THK is
                 one of the largest and most well-equipped teaching hospitals in
@@ -140,10 +140,10 @@ export default function Page() {
               </p>
               <div className="flex items-center mt-4 space-x-4">
                 <Link
-                  href="https://linkedin.com/in/asanka-nugaliyadde"
+                  href="https://www.kurunegalahospital.health.gov.lk/"
                   className="inline-flex items-center hover:text-blue-600 transition-all duration-300 font-semibold"
                 >
-                  Contact Hospital
+                  More Details
                   <ArrowTopRightOnSquareIcon width={24} className="ml-2" />
                 </Link>
               </div>

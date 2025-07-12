@@ -40,16 +40,16 @@ const Footer = () => {
         {isOpen.link1 && (
           <ul className="bg-white p-3 rounded-lg mb-4">
             <li>
-              <a href="#">Home</a>
+              <a href="#home">Home</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="#">Categories</a>
+              <a href="#categories">Categories</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         )}
@@ -69,16 +69,16 @@ const Footer = () => {
         {isOpen.link2 && (
           <ul className="bg-white p-3 rounded-lg">
             <li>
-              <a href="#">Home</a>
+              <a href="#home">Home</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="#">Categories</a>
+              <a href="#categories">Categories</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         )}
@@ -121,17 +121,17 @@ const Footer = () => {
         <div className="flex flex-col w-2/12 ml-12">
           <h3 className="font-bold text-2xl mb-5">Links</h3>
           <ul>
-            <li>
-              <a href="#">Home</a>
+           <li>
+              <a href="#home">Home</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="#">Categories</a>
+              <a href="#categories">Categories</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
