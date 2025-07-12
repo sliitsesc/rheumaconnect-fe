@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 
 const Footer = () => {
@@ -43,7 +44,7 @@ const Footer = () => {
               <a href="#home">Home</a>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link href="/about">About</Link>
             </li>
             <li>
               <a href="#categories">Categories</a>
@@ -72,7 +73,7 @@ const Footer = () => {
               <a href="#home">Home</a>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link href="/about">About</Link>
             </li>
             <li>
               <a href="#categories">Categories</a>
@@ -121,16 +122,15 @@ const Footer = () => {
         <div className="flex flex-col w-2/12 ml-12">
           <h3 className="font-bold text-2xl mb-5">Links</h3>
           <ul>
-           <li>
+            <li>
               <a href="#home">Home</a>
             </li>
             <li>
               {/* <a href="#about">About</a> */}
-              <a href="/about">About</a>
-              
+              <Link href="/about">About</Link>
             </li>
             <li>
-              <a href="#categories">Categories</a>
+               <a href="#categories">Categories</a>
             </li>
             <li>
               <a href="#contact">Contact</a>
