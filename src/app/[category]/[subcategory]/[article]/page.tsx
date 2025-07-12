@@ -1,10 +1,10 @@
 import { API_BASE_URL } from "@/config";
 import { API_ENDPOINTS } from "@/config/endpoints";
 import { getData } from "@/lib/helpers/dataFetchHelper";
+import { getImageUrl } from "@/lib/utils/imageUtils";
 import { ApiResponse, Article } from "@/types/CommonTypes";
 import Image from "next/image";
 import Link from "next/link";
-import BrokenImagePlaceholder from "/public/common/broken-image-placeholder.png";
 import DownloadPDF from "@/app/components/DownloadPDF/DownloadPDF";
 
 export default async function Page({
@@ -89,11 +89,7 @@ export default async function Page({
 
         <div className="w-full">
           <Image
-            src={
-              thumbnailImage?.url
-                ? `${API_BASE_URL}${thumbnailImage?.url}`
-                : BrokenImagePlaceholder
-            }
+            src={getImageUrl(thumbnailImage?.url)}
             alt="Doctor providing medical advice"
             width={550}
             height={550}

@@ -2,10 +2,9 @@ import Image from "next/image";
 import { ApiResponse, Category } from "@/types/CommonTypes";
 import { getData } from "@/lib/helpers/dataFetchHelper";
 import { API_ENDPOINTS } from "@/config/endpoints";
-import { API_BASE_URL } from "@/config";
+import { getImageUrl } from "@/lib/utils/imageUtils";
 import Link from "next/link";
 import { truncateText } from "@/lib/utils/truncateText";
-import BrokenImagePlaceholder from "/public/common/broken-image-placeholder.png";
 
 export default async function MainCategorySection() {
   const response: ApiResponse<Category> = await getData(
@@ -33,11 +32,7 @@ export default async function MainCategorySection() {
             >
               <div className="relative max-w-[274px] max-h-[103px] mx-auto aspect-[274/103] mb-4">
                 <Image
-                  src={
-                    category?.image?.url
-                      ? `${API_BASE_URL}${category.image?.url}`
-                      : BrokenImagePlaceholder
-                  }
+                  src={getImageUrl(category?.image?.url)}
                   alt={category?.image?.alternativeText}
                   fill
                   className="rounded-xl object-cover"
