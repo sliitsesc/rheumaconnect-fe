@@ -1,7 +1,6 @@
-import { API_BASE_URL } from "@/config";
 import { API_ENDPOINTS } from "@/config/endpoints";
 import { getData } from "@/lib/helpers/dataFetchHelper";
-import { getImageUrl } from "@/lib/utils/imageUtils";
+import { getImageUrl, getFileUrl } from "@/lib/utils/imageUtils";
 import { ApiResponse, Article } from "@/types/CommonTypes";
 import Image from "next/image";
 import Link from "next/link";
@@ -44,7 +43,8 @@ export default async function Page({
             <li>
               <Link
                 href={`/${category}/${subcategory}`}
-                className="hover:text-blue-600">
+                className="hover:text-blue-600"
+              >
                 {subcategory}
               </Link>
             </li>
@@ -104,10 +104,7 @@ export default async function Page({
           <h1 className="text-3xl font-bold text-[#484848] mb-8 text-center md:text-center">
             To view the full article, please download.
           </h1>
-          <DownloadPDF
-            pdfName={pdf?.name}
-            pdfUrl={`${API_BASE_URL}${pdf?.url}`}
-          />
+          <DownloadPDF pdfName={pdf?.name} pdfUrl={getFileUrl(pdf?.url)} />
         </section>
       </div>
     </section>
