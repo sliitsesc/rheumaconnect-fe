@@ -16,7 +16,7 @@ export default async function MainCategorySection() {
   return (
     <section
       className="container bg-white py-12 mx-auto scroll-m-[100px]"
-      id="resources"
+      id="categories"
     >
       <h2 className="text-[#484848] font-bold text-4xl text-center">
         Resource Categories

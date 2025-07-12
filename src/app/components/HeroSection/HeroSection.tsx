@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import translations from "../../../data/translations.json";
 
 type TranslationKeys = keyof typeof translations;
@@ -24,9 +25,11 @@ const HeroSection = ({ selectedLang }: HeroSectionProps) => {
           <p className="text-lg mb-6" style={{ color: "#555555" }}>
             {translations[selectedLang].description}
           </p>
-          <button className="text-white px-8 py-3 text-lg rounded-md shadow hover:brightness-110 transition bg-[#2F7CC4]">
-            {translations[selectedLang].button}
-          </button>
+          <Link href="#categories">
+            <button className="text-white px-8 py-3 text-lg rounded-md shadow hover:brightness-110 transition bg-[#2F7CC4]">
+              {translations[selectedLang].button}
+            </button>
+          </Link>
         </div>
         <div className="flex-shrink-0 flex-1">
           <Image
