@@ -100,11 +100,16 @@ export default async function Page({
 
         <p className="text-lg text-gray-600 mb-4 text-left">{description}</p>
 
-        <section className="flex flex-col items-center justify-center w-full h-[200px] bg-blue-200 rounded-lg p-10">
-          <h1 className="text-3xl font-bold text-[#484848] mb-8 text-center md:text-center">
-            To view the full article, please download.
+        <section className="flex flex-col items-center justify-center w-full min-h-[250px] bg-gradient-to-r from-blue-100 to-blue-200 rounded-xl p-4 md:p-12 shadow-lg my-8">
+          <h1 className="text-2xl md:text-3xl font-bold text-[#484848] mb-4 text-center">
+            To view the full article, please download
           </h1>
-          <DownloadPDF pdfName={pdf?.name} pdfUrl={getFileUrl(pdf?.url)} />
+
+          <div className="flex justify-center">
+            <div className="from-blue-100 to-blue-200 backdrop-blur-sm rounded-lg p-6 w-full max-w-lg">
+              <DownloadPDF pdfName={pdf?.name} pdfUrl={getFileUrl(pdf?.url)} />
+            </div>
+          </div>
         </section>
       </div>
     </section>

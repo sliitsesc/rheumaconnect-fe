@@ -16,9 +16,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Arthritis | Rheumatic conditions resource platform in Sri Lanka",
+  title: "Arthritis.lk | Trusted Rheumatic Conditions Information Platform in Sri Lanka",
   description:
-    "Platform where patients can easily access reliable information about rheumatic conditions.",
+    "Arthritis.lk is a reliable platform offering expert-verified information, treatment options, and support resources for rheumatic diseases in Sri Lanka.",
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
