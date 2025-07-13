@@ -26,12 +26,12 @@ const Footer = () => {
           Arthritis.lk
         </h3>
 
-        {/* Link 1 Dropdown */}
+        {/* Quick Links Dropdown */}
         <button
           onClick={() => toggleDropdown("link1")}
           className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center"
         >
-          Link 1
+          Quick Links
           {isOpen.link1 ? (
             <ChevronUpIcon className="h-6 w-6 text-gray-500" />
           ) : (
@@ -55,12 +55,12 @@ const Footer = () => {
           </ul>
         )}
 
-        {/* Link 2 Dropdown */}
-        <button
+        {/* Resources Dropdown */}
+        {/* <button
           onClick={() => toggleDropdown("link2")}
           className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center"
         >
-          Link 2
+          Resources
           {isOpen.link2 ? (
             <ChevronUpIcon className="h-6 w-6 text-gray-500" />
           ) : (
@@ -82,14 +82,14 @@ const Footer = () => {
               <a href="#contact">Contact</a>
             </li>
           </ul>
-        )}
+        )} */}
 
         {/* Contact Dropdown */}
         <button
           onClick={() => toggleDropdown("contact")}
           className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center"
         >
-          Contact
+          Connect
           {isOpen.contact ? (
             <ChevronUpIcon className="h-6 w-6 text-gray-500" />
           ) : (
@@ -130,7 +130,7 @@ const Footer = () => {
               <Link href="/about">About</Link>
             </li>
             <li>
-               <a href="#categories">Categories</a>
+              <a href="#categories">Categories</a>
             </li>
             <li>
               <a href="#contact">Contact</a>

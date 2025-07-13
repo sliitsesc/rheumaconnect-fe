@@ -18,10 +18,10 @@ export default async function MainCategorySection() {
       className="container bg-white py-12 mx-auto scroll-m-[100px]"
       id="categories"
     >
-      <h2 className="text-[#484848] font-bold text-4xl text-center">
+      <h2 className="mx-auto font-bold text-[32px] leading-[41.66px] text-[#484848] font-[DM Sans] text-center md:text-[32px] md:leading-[48px] md:text-[#484848]">
         Resource Categories
       </h2>
-      <p className="text-[#9E9E9E] text-center px-8 py-8 text-2xl">
+      <p className="text-[#9E9E9E] text-center px-8 py-8 text-[24px] leading-[32px]">
         A central resource to explore causes, types and treatments for rheumatic
         conditions.
       </p>
