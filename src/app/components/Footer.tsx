@@ -132,9 +132,6 @@ const Footer = () => {
             <li>
               <a href="#categories">Categories</a>
             </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
           </ul>
         </div>
 
@@ -142,9 +139,14 @@ const Footer = () => {
 
         <div className="flex flex-col w-3/12">
           <h3 className="font-bold text-2xl mb-5">Connect</h3>
-          <span>176 Ambepussa - Trincomalee Hwy, Kurunegala</span>
-
-          <span className="mt-2">0372 233 907</span>
+          <a
+            href="https://www.linkedin.com/in/dr-asanka-nugaliyadde-123456789/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Contact Dr. Asanka on LinkedIn
+          </a>
         </div>
       </div>
     </section>
