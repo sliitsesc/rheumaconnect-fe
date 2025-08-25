@@ -98,9 +98,9 @@ const Footer = () => {
         </button>
         {isOpen.contact && (
           <div className="bg-white p-3 rounded-lg">
-            <p>176 Ambepussa - Trincomalee Hwy </p>
-            <p>Kurunegala</p>
-            <p>0372 233 907</p>
+            <p>Dr. Asanka Nugaliyadde </p>
+            {/* <p>Kurunegala</p>
+            <p>0372 233 907</p> */}
           </div>
         )}
       </div>
