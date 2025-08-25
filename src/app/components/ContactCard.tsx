@@ -22,7 +22,7 @@ function ContactCard() {
         {/* Buttons container */}
         <div className="btns flex flex-col gap-6 order-2 md:order-1 md:gap-6">
           {/* "Call Kurunegala Hospital" button */}
-          <a
+          {/* <a
             href="tel:0112112889"
             className="py-[27px] px-[27px] gap-[33px] flex md:gap-0 md:items-center md:py-5 max-w-full md:max-w-[678px] pl-5 w-full bg-[#E7F2FC] rounded-2xl hover:bg-[#D6EAFB] transition">
             <Image
@@ -40,8 +40,8 @@ function ContactCard() {
               <div className="mt-1.5 text-[#9E9E9E] font-normal text-xl leading-[20px] hidden md:block">
                 0372 233 907
               </div>
-            </div>
-          </a>
+            </div> */}
+         
 
           {/* "Call Emergency Medical Hotline" button */}
           <a
