@@ -41,16 +41,16 @@ const Footer = () => {
         {isOpen.link1 && (
           <ul className="bg-white p-3 rounded-lg mb-4">
             <li>
-              <a href="#home">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
               <Link href="/about">About</Link>
             </li>
             <li>
-              <a href="#categories">Categories</a>
+              <Link href="/categories">Categories</Link>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         )}
@@ -123,14 +123,14 @@ const Footer = () => {
           <h3 className="font-bold text-2xl mb-5">Links</h3>
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
               {/* <a href="#about">About</a> */}
               <Link href="/about">About</Link>
             </li>
             <li>
-              <a href="#categories">Categories</a>
+              <Link href="/categories">Categories</Link>
             </li>
           </ul>
         </div>
