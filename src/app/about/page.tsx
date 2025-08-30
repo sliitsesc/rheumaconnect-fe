@@ -104,52 +104,6 @@ export default function Page() {
             </div>
           </div>
         </section>
-        <section>
-          <h1 className="text-3xl font-bold">About the Hospital</h1>
-          <div className="flex flex-col lg:flex-row mt-8 gap-8">
-            <div className="relative min-w-[300px] min0 h-[300px] w-[300px]">
-              <Image
-                src={
-                  "https://upload.wikimedia.org/wikipedia/commons/0/05/Teaching_Hospital_Kurunegala.png"
-                }
-                width={400}
-                height={400}
-                className="absolute w-full h-full object-cover rounded-xl"
-                alt="Image"
-              />
-            </div>
-            <div>
-              <p className="text-lg text-gray-600">
-                Teaching Hospital Kurunegala (THK) operates under Sri Lanka’s
-                Ministry of Health and is directly overseen by the Line
-                Ministry. It stands as the main tertiary care hospital in the
-                North Western Province and is part of a select group of
-                hospitals managed at the national level.
-              </p>
-              <p className="text-lg text-gray-600 mt-2">
-                THK offers a comprehensive range of specialized medical
-                services, including internal medicine, surgery, pediatrics,
-                gynecology and obstetrics, orthopedics, cardiology, ENT,
-                ophthalmology, urology, oncology, dermatology, neurology,
-                rheumatology, chest medicine, neonatology, and judicial
-                medicine.
-                {/* Uniquely, it also houses a dedicated Thalassemia Unit.
-                With a large number of inpatient wards and bed capacity, THK is
-                one of the largest and most well-equipped teaching hospitals in
-                the country. */}
-              </p>
-              <div className="flex items-center mt-4 space-x-4">
-                <Link
-                  href="https://www.kurunegalahospital.health.gov.lk/"
-                  className="inline-flex items-center hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  More Details
-                  <ArrowTopRightOnSquareIcon width={24} className="ml-2" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ const HeroSection = ({ selectedLang }: HeroSectionProps) => {
           <p className="text-lg mb-6" style={{ color: "#555555" }}>
             {translations[selectedLang].description}
           </p>
-          <Link href="#categories">
+          <Link href="/categories">
             <button className="text-white px-8 py-3 text-lg rounded-md shadow hover:brightness-110 transition bg-[#2F7CC4]">
               {translations[selectedLang].button}
             </button>
