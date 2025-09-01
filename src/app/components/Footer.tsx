@@ -49,9 +49,9 @@ const Footer = () => {
             <li>
               <Link href="/categories">Categories</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/contact">Contact</Link>
-            </li>
+            </li> */}
           </ul>
         )}
 
@@ -98,7 +98,14 @@ const Footer = () => {
         </button>
         {isOpen.contact && (
           <div className="bg-white p-3 rounded-lg">
-            <p>Dr. Asanka Nugaliyadde </p>
+            <a
+            href="https://www.linkedin.com/in/asanka-nugaliyadde-20006188/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+            Contact Dr. Asanka on LinkedIn
+          </a>
             {/* <p>Kurunegala</p>
             <p>0372 233 907</p> */}
           </div>
