@@ -140,10 +140,10 @@ const Footer = () => {
         <div className="flex flex-col w-3/12">
           <h3 className="font-bold text-2xl mb-5">Connect</h3>
           <a
-            href="https://www.linkedin.com/in/dr-asanka-nugaliyadde-123456789/"
+            href="https://www.linkedin.com/in/asanka-nugaliyadde-20006188/"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline"
+            className="text-blue-500 hover:underline"
           >
             Contact Dr. Asanka on LinkedIn
           </a>
