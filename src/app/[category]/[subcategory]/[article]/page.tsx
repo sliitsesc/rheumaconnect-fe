@@ -14,8 +14,19 @@ export default async function Page({
   const { article, category, subcategory } = await params;
 
   const response: ApiResponse<Article> = await getData(
-    `${API_ENDPOINTS.ARTICLES}?filters[slug][$eq]=${article}&populate=pdf&populate=thumbnailImage`
+    `${API_ENDPOINTS.ARTICLES}?filters[slug][$eq]=${article}&populate=pdf&populate=thumbnailImage`,
   );
+
+  // If no article found, redirect to /categories
+  if (!response.data || response.data.length === 0) {
+    if (typeof window !== "undefined") {
+      window.location.href = "/categories";
+      return null;
+    }
+    // For server-side, use Next.js redirect
+    // @ts-expect-error
+    return (await import("next/navigation")).redirect("/categories");
+  }
 
   const [{ title, publishedAt, description, thumbnailImage, pdf }] =
     response.data;
@@ -35,8 +46,8 @@ export default async function Page({
         <div className="text-sm text-gray-600 mb-4">
           <ul className="flex items-center gap-2">
             <li>
-              <Link href={`/${category}`} className="hover:text-blue-600">
-                {category}
+              <Link href="/categories" className="hover:text-blue-600">
+                Categories
               </Link>
             </li>
             <li className="text-lg">{">"}</li>
