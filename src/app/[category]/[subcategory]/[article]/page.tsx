@@ -24,7 +24,6 @@ export default async function Page({
       return null;
     }
     // For server-side, use Next.js redirect
-    // @ts-expect-error
     return (await import("next/navigation")).redirect("/categories");
   }
 
