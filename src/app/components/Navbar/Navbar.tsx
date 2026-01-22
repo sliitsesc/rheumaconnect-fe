@@ -31,29 +31,45 @@ export default function Navbar({ data }: { data: NavbarType }) {
         </Link>
 
         <nav className="hidden md:flex items-center gap-x-6">
-          {link.map(({ linkText, linkUrl }) =>
-            linkText.toLowerCase() === "about" ? (
-              <Link
-                key={linkText}
-                href="/about"
-                className={`hover:text-blue-600 text-gray-800 font-medium ${
-                  pathname === "/about" ? "text-blue-600" : ""
-                }`}
-              >
-                {linkText}
-              </Link>
-            ) : (
-              <Link
-                key={linkText}
-                href={linkUrl || "#"}
-                className={`hover:text-blue-600 text-gray-800 font-medium ${
-                  pathname === linkUrl ? "text-blue-600" : ""
-                }`}
-              >
-                {linkText}
-              </Link>
-            ),
-          )}
+          {link.map(({ linkText, linkUrl }) => {
+            if (linkText.toLowerCase() === "about") {
+              return (
+                <Link
+                  key={linkText}
+                  href="/about"
+                  className={`hover:text-blue-600 text-gray-800 font-medium ${
+                    pathname === "/about" ? "text-blue-600" : ""
+                  }`}
+                >
+                  {linkText}
+                </Link>
+              );
+            } else if (linkText.toLowerCase() === "categories") {
+              return (
+                <Link
+                  key={linkText}
+                  href="/categories"
+                  className={`hover:text-blue-600 text-gray-800 font-medium ${
+                    pathname === "/categories" ? "text-blue-600" : ""
+                  }`}
+                >
+                  {linkText}
+                </Link>
+              );
+            } else {
+              return (
+                <Link
+                  key={linkText}
+                  href={linkUrl || "#"}
+                  className={`hover:text-blue-600 text-gray-800 font-medium ${
+                    pathname === linkUrl ? "text-blue-600" : ""
+                  }`}
+                >
+                  {linkText}
+                </Link>
+              );
+            }
+          })}
 
           {navbarButton && (
             <Link href={navbarButton.buttonLink || "#"}>
@@ -116,35 +132,54 @@ export default function Navbar({ data }: { data: NavbarType }) {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-6 space-y-4">
-              {link.map(({ linkText, linkUrl }) =>
-                linkText.toLowerCase() === "about" ? (
-                  <Link
-                    key={linkText}
-                    href="/about"
-                    onClick={closeMenu}
-                    className={`block py-2 px-4 text-gray-800 hover:bg-gray-200 rounded ${
-                      pathname === "/about"
-                        ? "bg-gray-200 font-bold text-blue-600"
-                        : ""
-                    }`}
-                  >
-                    {linkText}
-                  </Link>
-                ) : (
-                  <Link
-                    key={linkText}
-                    href={linkUrl || "#"}
-                    onClick={closeMenu}
-                    className={`block py-2 px-4 text-gray-800 hover:bg-gray-200 rounded ${
-                      pathname === linkUrl
-                        ? "bg-gray-200 font-bold text-blue-600"
-                        : ""
-                    }`}
-                  >
-                    {linkText}
-                  </Link>
-                ),
-              )}
+              {link.map(({ linkText, linkUrl }) => {
+                if (linkText.toLowerCase() === "about") {
+                  return (
+                    <Link
+                      key={linkText}
+                      href="/about"
+                      onClick={closeMenu}
+                      className={`block py-2 px-4 text-gray-800 hover:bg-gray-200 rounded ${
+                        pathname === "/about"
+                          ? "bg-gray-200 font-bold text-blue-600"
+                          : ""
+                      }`}
+                    >
+                      {linkText}
+                    </Link>
+                  );
+                } else if (linkText.toLowerCase() === "categories") {
+                  return (
+                    <Link
+                      key={linkText}
+                      href="/categories"
+                      onClick={closeMenu}
+                      className={`block py-2 px-4 text-gray-800 hover:bg-gray-200 rounded ${
+                        pathname === "/categories"
+                          ? "bg-gray-200 font-bold text-blue-600"
+                          : ""
+                      }`}
+                    >
+                      {linkText}
+                    </Link>
+                  );
+                } else {
+                  return (
+                    <Link
+                      key={linkText}
+                      href={linkUrl || "#"}
+                      onClick={closeMenu}
+                      className={`block py-2 px-4 text-gray-800 hover:bg-gray-200 rounded ${
+                        pathname === linkUrl
+                          ? "bg-gray-200 font-bold text-blue-600"
+                          : ""
+                      }`}
+                    >
+                      {linkText}
+                    </Link>
+                  );
+                }
+              })}
               {navbarButton && (
                 <button
                   className="px-6 py-2 bg-[#2F7CC4] text-white rounded-full text-sm hover:bg-[#276ca3] transition"
