@@ -5,13 +5,23 @@ import { API_ENDPOINTS } from "@/config/endpoints";
 import { getImageUrl } from "@/lib/utils/imageUtils";
 import Link from "next/link";
 import { truncateText } from "@/lib/utils/truncateText";
+import { type Locale } from "@/config/i18n";
+import { getMessage } from "@/lib/utils/messageUtils";
 
-export default async function MainCategorySection() {
+export default async function MainCategorySection({
+  locale,
+}: {
+  locale: Locale;
+}) {
   const response: ApiResponse<Category> = await getData(
-    `${API_ENDPOINTS.CATEGORIES}?populate=image`
+    `${API_ENDPOINTS.CATEGORIES}?populate=image`,
+    { locale, allowFallback: false },
   );
 
   const categories = response?.data || [];
+
+  const title = getMessage(locale, "categories.title");
+  const description = getMessage(locale, "categories.description");
 
   return (
     <section
@@ -19,11 +29,10 @@ export default async function MainCategorySection() {
       id="categories"
     >
       <h2 className="mx-auto font-bold text-[32px] leading-[41.66px] text-[#484848] font-[DM Sans] text-center md:text-[32px] md:leading-[48px] md:text-[#484848]">
-        Resource Categories
+        {title}
       </h2>
       <p className="text-[#9E9E9E] text-center px-8 py-8 text-[24px] leading-[32px]">
-        A central resource to explore causes, types and treatments for rheumatic
-        conditions.
+        {description}
       </p>
       <div className="flex flex-wrap justify-center gap-4 px-8">
         {categories.map((category) => (
@@ -35,7 +44,11 @@ export default async function MainCategorySection() {
               <div className="relative max-w-[274px] max-h-[103px] mx-auto aspect-[274/103] mb-4">
                 <Image
                   src={getImageUrl(category?.image?.url)}
-                  alt={category?.image?.alternativeText}
+                  alt={
+                    category?.image?.alternativeText ||
+                    category.name ||
+                    "Category image"
+                  }
                   fill
                   className="rounded-xl object-cover"
                 />

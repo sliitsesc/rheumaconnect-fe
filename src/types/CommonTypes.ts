@@ -10,9 +10,16 @@ export interface ImageType {
   url: string;
 }
 
+export interface LocalizedRelation {
+  locale: string;
+  documentId: string;
+}
+
 export interface NavbarType {
   link: LinkType[];
   navbarButton: ButtonType;
+  locale?: string;
+  localizations?: LocalizedRelation[];
 }
 
 export interface LinkType {
@@ -29,6 +36,14 @@ export interface ButtonType {
 //#region Categories
 export interface ApiResponse<T> {
   data: T[];
+  meta?: {
+    pagination?: {
+      page: number;
+      pageSize: number;
+      pageCount: number;
+      total: number;
+    };
+  };
 }
 
 export interface ApiResponseSingle<T> {
@@ -43,6 +58,8 @@ export interface Category {
   slug: string;
   subcategories: Subcategory[];
   image: ImageType;
+  locale?: string;
+  localizations?: LocalizedRelation[];
 }
 
 export interface SubcategoryType {
@@ -52,6 +69,8 @@ export interface SubcategoryType {
   subtitle: string;
   slug: string;
   articles: Article[];
+  locale?: string;
+  localizations?: LocalizedRelation[];
 }
 
 export interface Article {
@@ -65,6 +84,8 @@ export interface Article {
   thumbnailImage: ImageType;
   publishedAt?: Date;
   pdf: PDFType;
+  locale?: string;
+  localizations?: LocalizedRelation[];
 }
 
 export interface Subcategory {

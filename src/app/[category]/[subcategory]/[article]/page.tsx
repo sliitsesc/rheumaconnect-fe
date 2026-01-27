@@ -2,6 +2,8 @@ import { API_ENDPOINTS } from "@/config/endpoints";
 import { getData } from "@/lib/helpers/dataFetchHelper";
 import { getImageUrl, getFileUrl } from "@/lib/utils/imageUtils";
 import { ApiResponse, Article } from "@/types/CommonTypes";
+import { getLocale } from "@/lib/utils/localeUtils";
+import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import DownloadPDF from "@/app/components/DownloadPDF/DownloadPDF";
@@ -12,19 +14,16 @@ export default async function Page({
   params: Promise<{ article: string; category: string; subcategory: string }>;
 }) {
   const { article, category, subcategory } = await params;
+  const locale = await getLocale();
 
   const response: ApiResponse<Article> = await getData(
     `${API_ENDPOINTS.ARTICLES}?filters[slug][$eq]=${article}&populate=pdf&populate=thumbnailImage`,
+    { locale }
   );
 
-  // If no article found, redirect to /categories
+  // If no article found, show 404
   if (!response.data || response.data.length === 0) {
-    if (typeof window !== "undefined") {
-      window.location.href = "/categories";
-      return null;
-    }
-    // For server-side, use Next.js redirect
-    return (await import("next/navigation")).redirect("/categories");
+    notFound();
   }
 
   const [{ title, publishedAt, description, thumbnailImage, pdf }] =

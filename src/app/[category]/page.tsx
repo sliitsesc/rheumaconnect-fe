@@ -1,7 +1,9 @@
 import { API_ENDPOINTS } from "@/config/endpoints";
 import { getData } from "@/lib/helpers/dataFetchHelper";
 import { ApiResponse, Category } from "@/types/CommonTypes";
+import { getLocale } from "@/lib/utils/localeUtils";
 import SubCategories from "../components/Subcategories/Subcategories";
+import { notFound } from "next/navigation";
 
 export default async function Page({
   params,
@@ -9,9 +11,16 @@ export default async function Page({
   params: Promise<{ category: string }>;
 }) {
   const categorySlug = (await params).category;
+  const locale = await getLocale();
+
   const response: ApiResponse<Category> = await getData(
-    `${API_ENDPOINTS.CATEGORIES}?populate=subcategories&filters[slug][$eq]=${categorySlug}`
+    `${API_ENDPOINTS.CATEGORIES}?populate=subcategories&filters[slug][$eq]=${categorySlug}`,
+    { locale },
   );
+
+  if (!response.data || response.data.length === 0) {
+    notFound();
+  }
 
   const [{ name, subtitle, subcategories, slug }] = response.data; // select first object in array, and destructure properties
 

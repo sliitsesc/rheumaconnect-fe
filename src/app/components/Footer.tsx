@@ -3,8 +3,14 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
+import { type Locale } from "@/config/i18n";
+import { getMessage } from "@/lib/utils/messageUtils";
 
-const Footer = () => {
+interface FooterProps {
+  locale: Locale;
+}
+
+const Footer = ({ locale }: FooterProps) => {
   // State to manage dropdown visibility for each section
   const [isOpen, setIsOpen] = useState({
     link1: false,
@@ -17,13 +23,24 @@ const Footer = () => {
     setIsOpen((prev) => ({ ...prev, [section]: !prev[section] }));
   };
 
+  // Get translations
+  const brand = getMessage(locale, "footer.brand");
+  const description = getMessage(locale, "footer.description");
+  const quickLinks = getMessage(locale, "footer.quickLinks");
+  const links = getMessage(locale, "footer.links");
+  const connect = getMessage(locale, "footer.connect");
+  const home = getMessage(locale, "footer.home");
+  const about = getMessage(locale, "footer.about");
+  const categories = getMessage(locale, "footer.categories");
+  const contactDrAsanka = getMessage(locale, "footer.contactDrAsanka");
+
   return (
     <section className="bg-gradient-to-b to-blue-100 from-white py-16 text-black border-t-[1px] border-[#DBEBFB]">
       {/* Mobile View */}
       <div className="container md:hidden flex flex-col mx-auto px-5">
         {/* RheumaConnect Brand Name */}
         <h3 className="font-bold text-2xl text-black mb-5 text-center">
-          Arthritis.lk
+          {brand}
         </h3>
 
         {/* Quick Links Dropdown */}
@@ -31,7 +48,7 @@ const Footer = () => {
           onClick={() => toggleDropdown("link1")}
           className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center"
         >
-          Quick Links
+          {quickLinks}
           {isOpen.link1 ? (
             <ChevronUpIcon className="h-6 w-6 text-gray-500" />
           ) : (
@@ -41,55 +58,23 @@ const Footer = () => {
         {isOpen.link1 && (
           <ul className="bg-white p-3 rounded-lg mb-4">
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/">{home}</Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link href="/about">{about}</Link>
             </li>
             <li>
-              <Link href="/categories">Categories</Link>
+              <Link href="/categories">{categories}</Link>
             </li>
-            {/* <li>
-              <Link href="/contact">Contact</Link>
-            </li> */}
           </ul>
         )}
-
-        {/* Resources Dropdown */}
-        {/* <button
-          onClick={() => toggleDropdown("link2")}
-          className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center"
-        >
-          Resources
-          {isOpen.link2 ? (
-            <ChevronUpIcon className="h-6 w-6 text-gray-500" />
-          ) : (
-            <ChevronDownIcon className="h-6 w-6 text-gray-500" />
-          )}
-        </button>
-        {isOpen.link2 && (
-          <ul className="bg-white p-3 rounded-lg">
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-            <li>
-              <a href="#categories">Categories</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        )} */}
 
         {/* Contact Dropdown */}
         <button
           onClick={() => toggleDropdown("contact")}
           className="bg-white rounded-lg shadow-md px-5 py-3 text-left text-black mb-3 flex justify-between items-center"
         >
-          Connect
+          {connect}
           {isOpen.contact ? (
             <ChevronUpIcon className="h-6 w-6 text-gray-500" />
           ) : (
@@ -99,15 +84,13 @@ const Footer = () => {
         {isOpen.contact && (
           <div className="bg-white p-3 rounded-lg">
             <a
-            href="https://www.linkedin.com/in/asanka-nugaliyadde-20006188/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
-          >
-            Contact Dr. Asanka on LinkedIn
-          </a>
-            {/* <p>Kurunegala</p>
-            <p>0372 233 907</p> */}
+              href="https://www.linkedin.com/in/asanka-nugaliyadde-20006188/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              {contactDrAsanka}
+            </a>
           </div>
         )}
       </div>
@@ -115,29 +98,21 @@ const Footer = () => {
       {/* Desktop View */}
       <div className="hidden container md:flex flex-row mx-auto px-10">
         <div className="flex flex-col w-5/12">
-          <h3 className="font-bold text-2xl mb-5"> Arthritis.lk</h3>
-          <p>
-            Platform where patients can easily access reliable information about
-            specific rheumatic conditions.
-            <br />
-            {/* The platform features educational content, medication guides, FAQs,
-            and more, aiming to raise awareness and support patients in managing
-            rheumatic diseases. */}
-          </p>
+          <h3 className="font-bold text-2xl mb-5">{brand}</h3>
+          <p>{description}</p>
         </div>
 
         <div className="flex flex-col w-2/12 ml-12">
-          <h3 className="font-bold text-2xl mb-5">Links</h3>
+          <h3 className="font-bold text-2xl mb-5">{links}</h3>
           <ul>
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/">{home}</Link>
             </li>
             <li>
-              {/* <a href="#about">About</a> */}
-              <Link href="/about">About</Link>
+              <Link href="/about">{about}</Link>
             </li>
             <li>
-              <Link href="/categories">Categories</Link>
+              <Link href="/categories">{categories}</Link>
             </li>
           </ul>
         </div>
@@ -145,14 +120,14 @@ const Footer = () => {
         <div className="flex flex-col w-2/12"></div>
 
         <div className="flex flex-col w-3/12">
-          <h3 className="font-bold text-2xl mb-5">Connect</h3>
+          <h3 className="font-bold text-2xl mb-5">{connect}</h3>
           <a
             href="https://www.linkedin.com/in/asanka-nugaliyadde-20006188/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:underline"
           >
-            Contact Dr. Asanka on LinkedIn
+            {contactDrAsanka}
           </a>
         </div>
       </div>

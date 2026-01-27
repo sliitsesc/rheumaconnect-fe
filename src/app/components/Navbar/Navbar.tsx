@@ -5,9 +5,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { NavbarType } from "@/types/CommonTypes";
-// import arthritisLogo from "/public/arthritis_logo.png"; // Adjust the path as needed
+import { type Locale, supportedLocales } from "@/config/i18n";
+import { LanguageDropdown } from "../LanguageSwitcher/LanguageDropdown";
 
-export default function Navbar({ data }: { data: NavbarType }) {
+export default function Navbar({
+  data,
+  locale,
+}: {
+  data: NavbarType;
+  locale: Locale;
+}) {
   const { link = [], navbarButton = null } = data || {};
 
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +31,7 @@ export default function Navbar({ data }: { data: NavbarType }) {
           <Image
             src="/logo3.svg"
             alt="Arthritis Logo"
-            width={175} // Adjust the width as neede
+            width={175}
             height={70}
             className="cursor-pointer"
           />
@@ -62,7 +69,7 @@ export default function Navbar({ data }: { data: NavbarType }) {
                   key={linkText}
                   href={linkUrl || "#"}
                   className={`hover:text-blue-600 text-gray-800 font-medium ${
-                    pathname === linkUrl ? "text-blue-600" : ""
+                    pathname === (linkUrl || "#") ? "text-blue-600" : ""
                   }`}
                 >
                   {linkText}
@@ -81,6 +88,8 @@ export default function Navbar({ data }: { data: NavbarType }) {
               </button>
             </Link>
           )}
+
+          <LanguageDropdown currentLocale={locale} />
         </nav>
 
         <button
@@ -170,7 +179,7 @@ export default function Navbar({ data }: { data: NavbarType }) {
                       href={linkUrl || "#"}
                       onClick={closeMenu}
                       className={`block py-2 px-4 text-gray-800 hover:bg-gray-200 rounded ${
-                        pathname === linkUrl
+                        pathname === (linkUrl || "#")
                           ? "bg-gray-200 font-bold text-blue-600"
                           : ""
                       }`}
@@ -189,9 +198,7 @@ export default function Navbar({ data }: { data: NavbarType }) {
                 </button>
               )}
               <div className="mt-4">
-                <div className="relative" ref={dropdownRef}>
-                  {/* Language dropdown code here */}
-                </div>
+                <LanguageDropdown currentLocale={locale} className="w-full" />
               </div>
             </div>
           </div>
