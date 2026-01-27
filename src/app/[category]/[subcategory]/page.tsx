@@ -15,7 +15,7 @@ export default async function Page({
 
   const response: ApiResponse<SubcategoryType> = await getData(
     `${API_ENDPOINTS.SUBCATEGORIES}?filters[slug][$eq]=${subcategory}&populate=articles&populate=articles.thumbnailImage`,
-    { locale }
+    { locale },
   );
 
   if (!response.data || response.data.length === 0) {

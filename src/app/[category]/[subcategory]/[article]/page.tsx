@@ -18,7 +18,7 @@ export default async function Page({
 
   const response: ApiResponse<Article> = await getData(
     `${API_ENDPOINTS.ARTICLES}?filters[slug][$eq]=${article}&populate=pdf&populate=thumbnailImage`,
-    { locale }
+    { locale },
   );
 
   // If no article found, show 404
