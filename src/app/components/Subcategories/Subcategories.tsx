@@ -21,7 +21,8 @@ export default function SubCategories({
             key={index}
             className="group relative border-[#DBEBFB] border sm:border-2 bg-white rounded-xl sm:rounded-lg shadow-sm 
             p-4 sm:p-6 sm:pt-4 sm:pb-16 w-full sm:w-72 cursor-pointer transition-all duration-300 
-            hover:bg-[#2F7CC4] mx-auto">
+            hover:bg-[#2F7CC4] mx-auto"
+          >
             <h2 className="text-gray-700 font-semibold text-xl sm:text-2xl group-hover:text-white transition-colors duration-300">
               {subcategory.name}
             </h2>

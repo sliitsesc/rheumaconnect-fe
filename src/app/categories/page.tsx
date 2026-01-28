@@ -1,6 +1,9 @@
 import MainCategorySection from "../components/MainCategorySection";
+import { getLocale } from "@/lib/utils/localeUtils";
 
-export default function CategoriesPage() {
+export default async function CategoriesPage() {
+  const locale = await getLocale();
+
   return (
     <div className="min-h-screen">
       {/* Header Section */}
@@ -9,7 +12,7 @@ export default function CategoriesPage() {
 
       {/* Categories Content */}
       <div className="bg-white">
-        <MainCategorySection />
+        <MainCategorySection locale={locale} />
       </div>
     </div>
   );

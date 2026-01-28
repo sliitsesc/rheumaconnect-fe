@@ -8,6 +8,7 @@ import { DM_Sans } from "next/font/google";
 import Footer from "./components/Footer";
 import { ApiResponseSingle, NavbarType } from "@/types/CommonTypes";
 import { getData } from "@/lib/helpers/dataFetchHelper";
+import { getLocale } from "@/lib/utils/localeUtils";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -16,7 +17,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Arthritis.lk | Trusted Rheumatic Conditions Information Platform in Sri Lanka",
+  title:
+    "Arthritis.lk | Trusted Rheumatic Conditions Information Platform in Sri Lanka",
   description:
     "Arthritis.lk is a reliable platform offering expert-verified information, treatment options, and support resources for rheumatic diseases in Sri Lanka.",
   icons: {
@@ -30,18 +32,21 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const locale = await getLocale();
+
   const navbarResponse: ApiResponseSingle<NavbarType> = await getData(
-    `${API_ENDPOINTS.NAVBAR}`
+    `${API_ENDPOINTS.NAVBAR}`,
+    { locale },
   );
 
   const navbarData = navbarResponse?.data;
 
   return (
-    <html lang="en" className={dmSans.variable}>
-      <body className="antialiased font-sans">
-        <Navbar data={navbarData} />
+    <html lang={locale} className={dmSans.variable} suppressHydrationWarning>
+      <body className="antialiased font-sans" suppressHydrationWarning>
+        <Navbar data={navbarData} locale={locale} />
         <main>{children}</main>
-        <Footer />
+        <Footer locale={locale} />
       </body>
     </html>
   );

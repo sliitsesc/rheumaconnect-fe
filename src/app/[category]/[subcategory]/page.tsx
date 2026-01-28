@@ -2,6 +2,8 @@ import ArticleCard from "@/app/components/Articles/ArticleCard";
 import { API_ENDPOINTS } from "@/config/endpoints";
 import { getData } from "@/lib/helpers/dataFetchHelper";
 import { ApiResponse, SubcategoryType } from "@/types/CommonTypes";
+import { getLocale } from "@/lib/utils/localeUtils";
+import { notFound } from "next/navigation";
 
 export default async function Page({
   params,
@@ -9,10 +11,16 @@ export default async function Page({
   params: Promise<{ category: string; subcategory: string }>;
 }) {
   const { category, subcategory } = await params;
+  const locale = await getLocale();
 
   const response: ApiResponse<SubcategoryType> = await getData(
-    `${API_ENDPOINTS.SUBCATEGORIES}?filters[slug][$eq]=${subcategory}&populate=articles&populate=articles.thumbnailImage`
+    `${API_ENDPOINTS.SUBCATEGORIES}?filters[slug][$eq]=${subcategory}&populate=articles&populate=articles.thumbnailImage`,
+    { locale, allowFallback: false },
   );
+
+  if (!response.data || response.data.length === 0) {
+    notFound();
+  }
 
   const [{ name, subtitle, articles }] = response.data;
 

@@ -1,14 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
-import translations from "../../../data/translations.json";
-
-type TranslationKeys = keyof typeof translations;
+import { type Locale } from "@/config/i18n";
+import { getMessage } from "@/lib/utils/messageUtils";
+import { getImageUrl } from "@/lib/utils/imageUtils";
 
 type HeroSectionProps = {
-  selectedLang: TranslationKeys;
+  locale: Locale;
+  data?: {
+    title: string;
+    description: string;
+    buttonText: string;
+    image?: {
+      url?: string;
+    };
+  };
 };
 
-const HeroSection = ({ selectedLang }: HeroSectionProps) => {
+const HeroSection = ({ locale, data }: HeroSectionProps) => {
+  // Use Strapi data if available, otherwise fallback to translations
+  const title = data?.title || getMessage(locale, "hero.title");
+  const description =
+    data?.description || getMessage(locale, "hero.description");
+  const button = data?.buttonText || getMessage(locale, "hero.button");
+  const heroImage = data?.image?.url
+    ? getImageUrl(data.image.url)
+    : "/doctor.png";
+
   return (
     <section
       id="home"
@@ -20,21 +37,25 @@ const HeroSection = ({ selectedLang }: HeroSectionProps) => {
             className="text-3xl lg:text-5xl font-bold mb-6 leading-snug"
             style={{ color: "#484848" }}
           >
-            {translations[selectedLang].title}
+            {title}
           </h1>
           <p className="text-lg mb-6" style={{ color: "#555555" }}>
-            {translations[selectedLang].description}
+            {description}
           </p>
           <Link href="/categories">
             <button className="text-white px-8 py-3 text-lg rounded-md shadow hover:brightness-110 transition bg-[#2F7CC4]">
-              {translations[selectedLang].button}
+              {button}
             </button>
           </Link>
         </div>
         <div className="flex-shrink-0 flex-1">
           <Image
-            src="/doctor.png"
-            alt="Doctor providing medical advice"
+            src={heroImage}
+            alt={
+              data?.title
+                ? `Hero image - ${data.title}`
+                : "Doctor providing medical advice"
+            }
             width={550}
             height={550}
             className="w-full lg:w-full lg:h-[445px] rounded-lg shadow-md object-cover"

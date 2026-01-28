@@ -1,0 +1,120 @@
+{
+  "en-US": {
+    "hero": {
+      "title": "Fighting Arthritis Together for a Healthier, Pain-Free Life",
+      "description": "Your trusted guide to understanding arthritis and other rheumatological conditions. Empowering you with knowledge, support, and solutions for a better tomorrow.",
+      "button": "Get Started"
+    },
+    "info": {
+      "title": "What is Arthritis.lk?",
+      "description": "Arthritis.lk is a free and open-to-all platform where patients can easily access reliable information about specific rheumatic conditions. The website is led by Dr. Asanka Nugaliyadde, Consultant Rheumatologist at the Teaching Hospital, Kurunegala. Arthritis.lk is developed by the Software Engineering Student Community (SESC) of SLIIT as a part of a technical CSR initiative. The platform features educational content, medication guides, FAQs, and more, aiming to raise awareness and support patients in managing rheumatic diseases.",
+      "learnMore": "Learn More"
+    },
+    "categories": {
+      "title": "Resource Categories",
+      "description": "A central resource to explore causes, types and treatments for rheumatic conditions."
+    },
+    "seekMedicalHelp": {
+      "title": "Seek Medical Help",
+      "description": "Have any questions or need assistance? Reach out to the hospital for appointments, consultations, or general inquiries. We're here to help you with your rheumatic care needs. Our team is committed to providing you with the guidance and support you need.",
+      "emergencyHotline": "Call Emergency Medical Hotline",
+      "hotlineNumber": "1990"
+    },
+    "about": {
+      "header": {
+        "title": "About Arthritis.lk",
+        "description": "The vision, mission, and the driving force behind this useful information portal"
+      },
+      "whatIs": {
+        "title": "What is Arthritis.lk",
+        "description1": "Arthritis.lk is a free and open-to-all platform where patients can easily access reliable information about specific rheumatic conditions. The website is led by Dr. Asanka Nugaliyadde, Consultant Rheumatologist at the Teaching Hospital, Kurunegala.",
+        "description2": "Arthritis.lk is developed by the Software Engineering Student Community (SESC) of SLIIT as a part of a technical CSR initiative. The platform features educational content, medication guides, FAQs, and more, aiming to raise awareness and support patients in managing rheumatic diseases.",
+        "imageAlt": "Arthritis.lk Platform"
+      },
+      "aboutDoctor": {
+        "title": "About the Doctor",
+        "description": "Dr. Asanka Nugaliyadde is a Consultant Rheumatologist at the Teaching Hospital, Kurunegala.",
+        "credentials": "Dr Asanka Nugaliyadde\nMBBS MD Specialty Certificate in Rheumatology (UK)\nConsultant Rheumatologist at Teaching Hospital Kurunegala",
+        "imageAlt": "Dr. Asanka Nugaliyadde",
+        "linkedin": "Linkedin",
+        "researchGate": "Research Gate",
+        "email": "Email"
+      }
+    },
+    "footer": {
+      "brand": "Arthritis.lk",
+      "description": "Platform where patients can easily access reliable information about specific rheumatic conditions.",
+      "quickLinks": "Quick Links",
+      "links": "Links",
+      "connect": "Connect",
+      "home": "Home",
+      "about": "About",
+      "categories": "Categories",
+      "contactDrAsanka": "Contact Dr. Asanka on LinkedIn"
+    },
+    "article": {
+      "readMore": "Read More",
+      "viewFullArticle": "To view the full article, please download",
+      "downloadPdf": "Download PDF"
+    }
+  },
+  "si-LK": {
+    "hero": {
+      "title": "සෞඛ්‍ය සම්පන්න, වේදනා රහිත ජීවිතයක් සඳහා එක්ව සන්ධිගත රෝගවලට එරෙහිව සටන් කරමු",
+      "description": "සන්ධිගත රෝග සහ අනෙකුත් රූමැටොලොජිකල් තත්ත්වයන් තේරුම් ගැනීමට ඔබේ විශ්වාසදායක මාර්ගෝපදේශය. වඩා හොඳ හෙටක් සඳහා දැනුම, සහාය සහ විසඳුම් සමඟ ඔබව සවිබල ගන්වීම.",
+      "button": "පටන් ගන්න"
+    },
+    "info": {
+      "title": "Arthritis.lk යනු කුමක්ද?",
+      "description": "Arthritis.lk යනු නිදහස් සහ සියලු දෙනාට විවෘත වේදිකාවක් වන අතර එහිදී රෝගීන්ට විශේෂිත රූමැටික් තත්ත්වයන් පිළිබඳ විශ්වසනීය තොරතුරු පහසුවෙන් ප්‍රවේශ විය හැක. වෙබ් අඩවියට නායකත්වය දෙන්නේ කුරුණෑගල ශික්ෂණ රෝහලේ උපදේශක රූමැටොලොජිස්ට් වෛද්‍ය අසංක නුගලියද්ද මහතාය. Arthritis.lk SLIIT හි මෘදුකාංග ඉංජිනේරු ශිෂ්‍ය ප්‍රජාව (SESC) විසින් තාක්ෂණික ආයතනික සමාජ වගකීම් මුලපිරීමක කොටසක් ලෙස සංවර්ධනය කර ඇත. වේදිකාව අධ්‍යාපනික අන්තර්ගතය, ඖෂධ මාර්ගෝපදේශ, නිති අසන ප්‍රශ්න සහ තවත් බොහෝ දේ ඇතුළත් කරයි, දැනුවත් කිරීම සහ රෝගීන්ට රූමැටික් රෝග කළමනාකරණය කිරීමට සහාය වීම අරමුණු කර ගෙන.",
+      "learnMore": "වැඩිදුර ඉගෙන ගන්න"
+    },
+    "categories": {
+      "title": "සම්පත් ප්‍රවර්ග",
+      "description": "රූමැටික් තත්ත්වයන් සඳහා හේතු, වර්ග සහ ප්‍රතිකාර ගවේෂණය කිරීමට මධ්‍යම සම්පතක්."
+    },
+    "seekMedicalHelp": {
+      "title": "වෛද්‍ය සහාය ගන්න",
+      "description": "කිසියම් ප්‍රශ්නයක් තිබේද නැතහොත් උදව් අවශ්‍යද? හමුවීම්, උපදේශන හෝ සාමාන්‍ය විමසීම් සඳහා රෝහල අමතන්න. ඔබේ රූමැටික් සත්කාර අවශ්‍යතා සඳහා ඔබට උපකාර කිරීමට අපි මෙහි සිටිමු. ඔබට අවශ්‍ය මග පෙන්වීම සහ සහාය ලබා දීමට අපගේ කණ්ඩායම කැපවී සිටී.",
+      "emergencyHotline": "හදිසි වෛද්‍ය ක්ෂණික ඇමතුම් අංකය අමතන්න",
+      "hotlineNumber": "1990"
+    },
+    "about": {
+      "header": {
+        "title": "Arthritis.lk ගැන",
+        "description": "මෙම ප්‍රයෝජනවත් තොරතුරු ද්වාරයේ පිටුපස ඇති දර්ශනය, ඉතිරාස සහ චාලක බලය"
+      },
+      "whatIs": {
+        "title": "Arthritis.lk යනු කුමක්ද",
+        "description1": "Arthritis.lk යනු නිදහස් සහ සියලු දෙනාට විවෘත වේදිකාවක් වන අතර එහිදී රෝගීන්ට විශේෂිත රූමැටික් තත්ත්වයන් පිළිබඳ විශ්වසනීය තොරතුරු පහසුවෙන් ප්‍රවේශ විය හැක. වෙබ් අඩවියට නායකත්වය දෙන්නේ කුරුණෑගල ශික්ෂණ රෝහලේ උපදේශක රූමැටොලොජිස්ට් වෛද්‍ය අසංක නුගලියද්ද මහතාය.",
+        "description2": "Arthritis.lk SLIIT හි මෘදුකාංග ඉංජිනේරු ශිෂ්‍ය ප්‍රජාව (SESC) විසින් තාක්ෂණික ආයතනික සමාජ වගකීම් මුලපිරීමක කොටසක් ලෙස සංවර්ධනය කර ඇත. වේදිකාව අධ්‍යාපනික අන්තර්ගතය, ඖෂධ මාර්ගෝපදේශ, නිති අසන ප්‍රශ්න සහ තවත් බොහෝ දේ ඇතුළත් කරයි, දැනුවත් කිරීම සහ රෝගීන්ට රූමැටික් රෝග කළමනාකරණය කිරීමට සහාය වීම අරමුණු කර ගෙන.",
+        "imageAlt": "Arthritis.lk වේදිකාව"
+      },
+      "aboutDoctor": {
+        "title": "ඩොක්ටර් ගැන",
+        "description": "වෛද්‍ය අසංක නුගලියද්ද යනු කුරුණෑගල ශික්ෂණ රෝහලේ උපදේශක රූමැටොලොජිස්ට් වෙයි.",
+        "credentials": "වෛද්‍ය අසංක නුගලියද්ද\nMBBS MD Specialty Certificate in Rheumatology (UK)\nකුරුණෑගල ශික්ෂණ රෝහල උපදේශක රූමැටොලොජිස්ට්",
+        "imageAlt": "වෛද්‍ය අසංක නුගලියද්ද",
+        "linkedin": "Linkedin",
+        "researchGate": "Research Gate",
+        "email": "ඊ-තැපෑල"
+      }
+    },
+    "footer": {
+      "brand": "Arthritis.lk",
+      "description": "රෝගීන්ට විශේෂිත රූමැටික් තත්ත්වයන් පිළිබඳ විශ්වසනීය තොරතුරු පහසුවෙන් ප්‍රවේශ විය හැකි වේදිකාව.",
+      "quickLinks": "ඉක්මන් සබැඳි",
+      "links": "සබැඳි",
+      "connect": "සම්බන්ධ වන්න",
+      "home": "මුල් පිටුව",
+      "about": "අප ගැන",
+      "categories": "වර්ග",
+      "contactDrAsanka": "ඩොක්ටර් අසංකා හා සම්බන්ධ වන්න"
+    },
+    "article": {
+      "readMore": "වැඩිදුර කියාවන්න",
+      "viewFullArticle": "සම්පූර්ණ ලිපිය දැකීමට කරුණාකර බාගාන්න",
+      "downloadPdf": "PDF බාගාන්න"
+    }
+  }
+}
