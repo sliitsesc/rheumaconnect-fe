@@ -12,7 +12,9 @@ type InfoSectionProps = {
     title: string;
     description: string;
     learnMoreText: string;
-    image?: any;
+    image?: {
+      url?: string;
+    };
   };
 };
 
@@ -22,7 +24,7 @@ function InfoSection({ locale, data }: InfoSectionProps) {
   const description =
     data?.description || getMessage(locale, "info.description");
   const learnMore = data?.learnMoreText || getMessage(locale, "info.learnMore");
-  const infoImage = data?.image ? getImageUrl(data.image) : "/treatment.jpg";
+  const infoImage = data?.image?.url ? getImageUrl(data.image.url) : "/treatment.jpg";
 
   return (
     <section className="relative mx-auto py-1 px-[32px] lg:px-0 lg:py-4 gap-[10px] md:gap-0 bg-white md:mt-[50px]">

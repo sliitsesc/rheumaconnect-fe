@@ -56,10 +56,10 @@ export async function getData(
     }
 
     // Helper function to check if data is empty (works for both arrays and objects)
-    const hasData = (data: any): boolean => {
+    const hasData = (data: unknown): boolean => {
       if (!data) return false;
       if (Array.isArray(data)) return data.length > 0;
-      if (typeof data === 'object') return Object.keys(data).length > 0;
+      if (typeof data === 'object') return Object.keys(data as Record<string, unknown>).length > 0;
       return true;
     };
 

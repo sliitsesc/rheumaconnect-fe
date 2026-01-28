@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { NavbarType } from "@/types/CommonTypes";
-import { type Locale, supportedLocales } from "@/config/i18n";
+import { type Locale } from "@/config/i18n";
 import { LanguageDropdown } from "../LanguageSwitcher/LanguageDropdown";
 
 export default function Navbar({
@@ -19,7 +19,6 @@ export default function Navbar({
 
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);

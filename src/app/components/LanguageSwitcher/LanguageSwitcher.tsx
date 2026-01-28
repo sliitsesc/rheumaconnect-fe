@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { type Locale, supportedLocales, localeCookieName } from "@/config/i18n";
-import { useState, useTransition } from "react";
+import { useTransition } from "react";
 
 interface LanguageSwitcherProps {
   currentLocale: Locale;
@@ -48,10 +48,10 @@ export function LanguageSwitcher({
             }
             ${isPending ? "opacity-50 cursor-wait" : "cursor-pointer"}
           `}
-          aria-label={`Switch to ${locale === "en" ? "English" : "Sinhala"}`}
+          aria-label={`Switch to ${locale === "en-US" ? "English" : "Sinhala"}`}
           aria-current={currentLocale === locale ? "true" : undefined}
         >
-          {locale === "en" ? "English" : "සිංහල"}
+          {locale === "en-US" ? "English" : "සිංහල"}
         </button>
       ))}
     </div>

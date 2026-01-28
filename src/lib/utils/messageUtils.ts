@@ -7,7 +7,7 @@ export function getMessage(locale: Locale, key: string): string {
   const keys = key.split(".");
   
   // Try exact locale match first
-  let value: any = messages[locale as keyof Messages];
+  let value: unknown = messages[locale as keyof Messages];
 
   // If not found and locale has a dash (e.g., si-LK), try base locale (si)
   if (!value && locale.includes("-")) {
@@ -18,7 +18,7 @@ export function getMessage(locale: Locale, key: string): string {
   // Traverse nested keys
   for (const k of keys) {
     if (value && typeof value === "object" && k in value) {
-      value = value[k];
+      value = (value as Record<string, unknown>)[k];
     } else {
       return key; // fallback to key if not found
     }

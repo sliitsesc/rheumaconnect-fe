@@ -3,11 +3,8 @@
 import { ImageType } from "@/types/CommonTypes";
 import { getImageUrl } from "@/lib/utils/imageUtils";
 import Image from "next/image";
-import Link from "next/link";
 import { truncateText } from "@/lib/utils/truncateText";
 import { useRouter } from "next/navigation";
-import { getMessage } from "@/lib/utils/messageUtils";
-import type { Locale } from "@/config/i18n";
 
 export interface ArticleCardProps {
   title: string;
@@ -16,7 +13,6 @@ export interface ArticleCardProps {
   categorySlug: string;
   subcategorySlug: string;
   thumbnailImage: ImageType;
-  locale: Locale;
 }
 
 export default function ArticleCard({
@@ -26,7 +22,6 @@ export default function ArticleCard({
   categorySlug,
   subcategorySlug,
   thumbnailImage,
-  locale,
 }: ArticleCardProps) {
   const router = useRouter();
 

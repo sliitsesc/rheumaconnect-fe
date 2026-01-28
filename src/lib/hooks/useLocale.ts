@@ -16,7 +16,7 @@ export function useClientLocale(): Locale | null {
     const segments = pathname.split("/").filter(Boolean);
     const potentialLocale = segments[0] as Locale;
 
-    if (potentialLocale === "en" || potentialLocale === "si") {
+    if (potentialLocale === "en-US" || potentialLocale === "si-LK") {
       setLocale(potentialLocale);
     }
   }, []);
@@ -35,7 +35,7 @@ export function usePathWithoutLocale(): string {
     const segments = pathname.split("/").filter(Boolean);
 
     // Remove locale from path
-    if (segments[0] === "en" || segments[0] === "si") {
+    if (segments[0] === "en-US" || segments[0] === "si-LK") {
       segments.shift();
     }
 

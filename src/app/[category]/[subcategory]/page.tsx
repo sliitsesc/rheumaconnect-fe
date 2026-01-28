@@ -42,7 +42,6 @@ export default async function Page({
               categorySlug={category}
               subcategorySlug={subcategory}
               thumbnailImage={article?.thumbnailImage}
-              locale={locale}
             />
           );
         })}

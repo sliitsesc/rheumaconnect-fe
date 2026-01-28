@@ -10,7 +10,7 @@ export async function getLocale(): Promise<Locale> {
   
   // If not in header, try to get from cookie
   if (!locale) {
-    locale = cookiesList.get(localeCookieName)?.value;
+    locale = cookiesList.get(localeCookieName)?.value || null;
   }
   
   return isLocale(locale) ? locale : defaultLocale;

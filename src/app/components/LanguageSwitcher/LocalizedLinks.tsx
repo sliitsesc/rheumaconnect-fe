@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { type Locale, supportedLocales } from "@/config/i18n";
+import { type Locale } from "@/config/i18n";
 
 interface LocalizedLink {
   locale: Locale;
@@ -12,21 +12,19 @@ interface LocalizedLink {
 
 interface LocalizedLinksProps {
   currentLocale: Locale;
-  currentSlug: string;
   localizations?: LocalizedLink[];
   className?: string;
 }
 
 export function LocalizedLinks({
   currentLocale,
-  currentSlug,
   localizations = [],
   className = "",
 }: LocalizedLinksProps) {
   const pathname = usePathname();
 
   // Build the base path without the locale and slug
-  const pathSegments = pathname.split("/").filter(Boolean);
+  const pathSegments = (pathname || "").split("/").filter(Boolean);
   pathSegments.shift(); // Remove locale
   pathSegments.pop(); // Remove current slug
   const basePath = pathSegments.join("/");
@@ -37,7 +35,7 @@ export function LocalizedLinks({
 
       {/* Current locale */}
       <span className="text-sm font-semibold text-[#2F7CC4]">
-        {currentLocale === "en" ? "English" : "සිංහල"}
+        {currentLocale === "en-US" ? "English" : "සිංහල"}
       </span>
 
       {/* Other available locales */}
@@ -53,7 +51,7 @@ export function LocalizedLinks({
             className="text-sm text-blue-600 hover:text-blue-800 hover:underline"
             hrefLang={loc.locale}
           >
-            {loc.locale === "en" ? "English" : "සිංහල"}
+            {loc.locale === "en-US" ? "English" : "සිංහල"}
           </Link>
         );
       })}
