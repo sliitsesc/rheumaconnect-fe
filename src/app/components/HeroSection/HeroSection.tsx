@@ -22,7 +22,9 @@ const HeroSection = ({ locale, data }: HeroSectionProps) => {
   const description =
     data?.description || getMessage(locale, "hero.description");
   const button = data?.buttonText || getMessage(locale, "hero.button");
-  const heroImage = data?.image?.url ? getImageUrl(data.image.url) : "/doctor.png";
+  const heroImage = data?.image?.url
+    ? getImageUrl(data.image.url)
+    : "/doctor.png";
 
   return (
     <section
