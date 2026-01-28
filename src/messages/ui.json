@@ -51,6 +51,11 @@
       "about": "About",
       "categories": "Categories",
       "contactDrAsanka": "Contact Dr. Asanka on LinkedIn"
+    },
+    "article": {
+      "readMore": "Read More",
+      "viewFullArticle": "To view the full article, please download",
+      "downloadPdf": "Download PDF"
     }
   },
   "si-LK": {
@@ -105,6 +110,11 @@
       "about": "අප ගැන",
       "categories": "වර්ග",
       "contactDrAsanka": "ඩොක්ටර් අසංකා හා සම්බන්ධ වන්න"
+    },
+    "article": {
+      "readMore": "වැඩිදුර කියාවන්න",
+      "viewFullArticle": "සම්පූර්ණ ලිපිය දැකීමට කරුණාකර බාගාන්න",
+      "downloadPdf": "PDF බාගාන්න"
     }
   }
 }

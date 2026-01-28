@@ -15,14 +15,14 @@ export default async function Page({
 
   const response: ApiResponse<Category> = await getData(
     `${API_ENDPOINTS.CATEGORIES}?populate=subcategories&filters[slug][$eq]=${categorySlug}`,
-    { locale },
+    { locale, allowFallback: false },
   );
 
   if (!response.data || response.data.length === 0) {
     notFound();
   }
 
-  const [{ name, subtitle, subcategories, slug }] = response.data; // select first object in array, and destructure properties
+  const [{ name, subtitle, subcategories, slug }] = response.data;
 
   return (
     <>

@@ -3,6 +3,7 @@ import { getData } from "@/lib/helpers/dataFetchHelper";
 import { getImageUrl, getFileUrl } from "@/lib/utils/imageUtils";
 import { ApiResponse, Article } from "@/types/CommonTypes";
 import { getLocale } from "@/lib/utils/localeUtils";
+import { getMessage } from "@/lib/utils/messageUtils";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,7 +19,7 @@ export default async function Page({
 
   const response: ApiResponse<Article> = await getData(
     `${API_ENDPOINTS.ARTICLES}?filters[slug][$eq]=${article}&populate=pdf&populate=thumbnailImage`,
-    { locale },
+    { locale, allowFallback: false },
   );
 
   // If no article found, show 404
@@ -111,12 +112,16 @@ export default async function Page({
 
         <section className="flex flex-col items-center justify-center w-full min-h-[250px] bg-gradient-to-r from-blue-100 to-blue-200 rounded-xl p-4 md:p-12 shadow-lg my-8">
           <h1 className="text-2xl md:text-3xl font-bold text-[#484848] mb-4 text-center">
-            To view the full article, please download
+            {getMessage(locale, "article.viewFullArticle")}
           </h1>
 
           <div className="flex justify-center">
             <div className="from-blue-100 to-blue-200 backdrop-blur-sm rounded-lg p-6 w-full max-w-lg">
-              <DownloadPDF pdfName={pdf?.name} pdfUrl={getFileUrl(pdf?.url)} />
+              <DownloadPDF
+                pdfName={pdf?.name}
+                pdfUrl={getFileUrl(pdf?.url)}
+                locale={locale}
+              />
             </div>
           </div>
         </section>
