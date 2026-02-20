@@ -85,7 +85,7 @@ export default async function Page() {
                   <ArrowTopRightOnSquareIcon width={24} className="ml-2" />
                 </Link>
                 <Link
-                  href="mailto:contact@arthritis.lk"
+                  href="mailto:drasanka79@gmail.com"
                   className="inline-flex items-center hover:text-blue-600 transition-all duration-300 font-semibold"
                 >
                   {emailLabel}
